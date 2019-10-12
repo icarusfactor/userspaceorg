@@ -1,0 +1,37 @@
+EXAMPLE USAGE OF EACH SLIDE FOR THE SLIDE-ANYTHING PLUGIN
+
+NOTE: I had to setup an empty "initslide" to make it all work and use its javascript.
+Shortcode : [slide-anything id='1712']
+
+GLOBAL VARIABLES:
+COLOR SCHEME: WHITE
+ICON LOCATION = CENTER CENTER
+
+Slide Duration: 0
+
+All the below items checked:
+Loop Slider:
+Stop on Hover:
+Random Order:
+Allow Shortcodes:
+Navigate Arrows:
+Show Pagination:
+Mouse Drag:
+Touch Drag:
+
+CUSTOM WORDPRESS PLUGIN IN EACH SLIDE ALL BY ITSELF FOR "NEWSFEED" : [slide-anything id='1299']
+
+[seedApp name="" url="" rss="" count=""] 
+
+CUSTOM WORDPRESS PLUGIN IN EACH SLIDE ALL BY ITSELF FOR "SECURITY" : [slide-anything id='1429']
+
+[infosecApp name="" rss="" ]
+
+CUSTOM WORDPRESS PLUGIN IN EACH SLIDE ALL BY ITSELF FOR "Video Streams" : [slide-anything id='1316']
+
+[seedApp name="" url="" rss="" count="" media="APVIDEO" id=""]
+
+CUSTOM WORDPRESS PLUGIN IN EACH SLIDE ALL BY ITSELF FOR "Audio Peels" : [slide-anything id='1310']
+
+[audiopeelApp name="" url="" rss="" ]
+

@@ -1,0 +1,58 @@
+This is a list of the Wordpress plugins I use. 
+
+STANDARD: All In One SEO : Controls robots.txt title and keywords of page for search engines.  
+
+CUSTOM: AppLePie Plugin : Parent plugin for custom RSS feeds : By Daniel Yount 
+
+STNADARD: Carousel Slider :  By Sayful Islam
+NOTE: Used for the home page distroslider
+
+STANDARD: Footer Mega Grid Columns :  By WP OnlineSupport 
+
+STANDARD: Frontend Checklist :  By Jonas Breuer 
+NOTE: I use this plugin for personal TODO check list. 
+
+CUSTOM: Hack for turning off LOADING screen across all browsers. By Daniel Yount 
+
+CUSTOM: Infosec Vulnerability RSS Feed App : By Daniel Yount
+
+STANDARD: Menu Image : By Rui Guerreiro 
+NOTE: For my Social Media feeds
+
+CUSTOM: New FOSS Packages RSS Feed App :  By Daniel Yount IcarusFactor 
+
+CUSTOM: New Linux Kernel RSS Feed App :  By Daniel Yount IcarusFactor 
+
+STANDARD: Page Animations And Transitions : By weblizar
+NOTE: Had to remove class via jquery so Jquery DataTables would work ,which was done in functions.php
+
+STANDARD: podcast player : By vedathemes
+NOTE: My Audio Peel plugin uses this plugin.
+
+CUSTOM: RSS Audio Peel App : By Daniel Yount IcarusFactor
+
+CUSTOM: RSS Seed Feed App : By Daniel Yount IcarusFactor
+NOTE: used for News and Video feeds.
+
+STANDARD: Slide Anything - Responsive Content / HTML Slider and Carousel : By Simon Edge 
+NOTE: Used for all of my dynamic feed pages 
+
+STANDARD: TablePress : By Tobias Bäthge 
+NOTE: Had to add css and js to my functions.php and init datatable to common.js : Used for Citations
+
+STANDARD: UpdraftPlus - Backup/Restore : By UpdraftPlus.Com, DavidAnderson 
+NOTE: Used to backup/restore my Wordpress site. 
+
+STANDARD: Broken Link Checker. : By ManageWP
+NOTE: These pluings are only active when I need them , I disable them to save active memory and processing time. 
+
+STANDARD: Query Monitor : By John Blackbourn 
+NOTE: Deactivated when not used. Mostly on mirrored dev system. 
+
+STANDARD: WordPress Importer : By wordpressdotorg 
+ 
+STANDARD: WP Migrate DB : By Delicious Brains 
+
+STANDARD: WP-Sweep :  By Lester 'GaMerZ' Chan 
+
+
