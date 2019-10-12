@@ -1,4 +1,4 @@
-##USERSPACEORG
+# USERSPACEORG
 
 FOSS code for community website setup of server and development system. 
 
@@ -12,6 +12,7 @@ In the future I will make HOWTO setup the site  for each step as follows.
 >         CREATE DATABASE wordpress;
 
 > 2: install Wordpress compat with 5.1 php5.x
+
 >         "tar zxvf wordpress-5.1.2.tar.gz" to create wordpress directory.
 
 > 3: Copy over wp-config.php Keep each systems creditials in comments and uncomment next system.
@@ -31,17 +32,23 @@ In the future I will make HOWTO setup the site  for each step as follows.
 **Restore to next system.**
 
 > 7: Migrate sql into systems DB.  
+
 >       mysql  wordpress < userspa2_wordpress-migrate-20191008215324.sql 
 
 > 8:Overwrite database username and password for local system to match wp-config.php   
+
 >      USE wordpress;
+
 >       GRANT ALL PRIVILEGES ON wordpress.* TO "userspace"@"localhost" IDENTIFIED BY "notmypassword";
 
 > 9:Change wordpress login password to current system.  
+
 >      ONLINE GERNATE MD5HASH: http://www.miraclesalad.com/webtools/md5.php
+
 >      OR
 
 >      A: Get an MD5 hash of your password.
+
 >         On Unix/Linux:
 
 >         Create a file called wp.txt, containing nothing but the wordpress admin password.
@@ -51,6 +58,7 @@ In the future I will make HOWTO setup the site  for each step as follows.
 >         rm wp.txt    
 
 >      B: login into mysql  UPDATE wp_users SET user_pass="tc4dlsd67888dkf3662c86818b9df302314" WHERE ID = 1;
+
 >         1:“use (name-of-database)” (select WordPress database)
 
 >         2:“show tables;” (you’re looking for a table name with “users” at the end)
@@ -64,7 +72,9 @@ In the future I will make HOWTO setup the site  for each step as follows.
 >         6: "exit" mysql
       
 > 10: Change permissions on files and directoies in alignment with httpd process.
+
 >       This will let you update plughins to wordpress. 
+
 > cd /var/www/html/wordpress/
 
 > chown -R www-data ./wp-content/*
@@ -78,7 +88,9 @@ In the future I will make HOWTO setup the site  for each step as follows.
 > 11:Install Upfdraft pluign. Actvate.
 
 > 12: SETTINGS->UPDRAFTPLUS BACKUPS and Install "plugins" compressed file with.
+
 >        Themes and Plugins. (plugin will have to be written to move from dev to prod. ) 
+
 >        Dont do this for "uploads" most likly will be too large. 
 
 > 13: Activate pluigns that you use.        
@@ -86,26 +98,37 @@ In the future I will make HOWTO setup the site  for each step as follows.
 > 14: Copy over compressed file images to the Upload directory and decompress.
        
 > 14: Tools-> IMPORT:
+
 >   install WordPress importer. 
+
 >   Run importer.
+
 >   Pick file you created earlier from TOOLS->EXPORT
    
 > 15: Install and activate Fix Media Library.  
+
 >       Just check Regernate Thumbnails and start processing.
        
 > 16: Random Mix
+
 >        Menu Item is not working : Had to save again. APPEARANCE->MENUS
+
 >        I also changed menu item icons to thumbnail size. 
         
 > 17: Wordsquest needs to be added to the DB. Then activate plugin.
+
 >         scp words.sql to next server.  
+
 >        mysql  wordpress < words.sql
    
 > 18: Permalinks were not working , had to go to SETTING->PERMALINKS and SAVE.
+
 >    This will regenerate your .htaccess file. 
   
 > 19: If you still have problems with 404 and your permalinks. Check the apache2
+
 > configs or in sites enabled for "AllowOverride None" Change None to All. If you
+
 > dont have access to the apache2 configs, Changing permalinks type may work. 
 
 
