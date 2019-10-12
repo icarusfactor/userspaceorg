@@ -131,4 +131,10 @@ In the future I will make HOWTO setup the site  for each step as follows.
 
 > dont have access to the apache2 configs, Changing permalinks type may work. 
 
+> You may need to install the mbstirng package if video/audio pages are not working.
+
+> Debian/Ubuntu "sudo apt-get install php-mbstring"
+
+> Redhat/CentOS "sudo yum install php-mbstring"
+
 
