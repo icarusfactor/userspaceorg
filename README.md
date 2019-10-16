@@ -1,4 +1,4 @@
-![Userspace.org](../Media/USO_LOGO3.png)
+![Userspace.org](/Media/USO_LOGO3.png)
 
 # USERSPACEORG
 
