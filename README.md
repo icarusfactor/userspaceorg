@@ -8,14 +8,13 @@ In the future I will make HOWTO setup the site  for each step as follows.
 
 **CREATE DUPLICATE TEST SYSTEM**
 
-> 1: Setup Wordpress DB in maria DB. 
->         CREATE DATABASE wordpress;
+* Setup Wordpress DB in maria DB. 
+    * CREATE DATABASE wordpress;
 
-> 2: install Wordpress compat with 5.1 php5.x
+* Install Wordpress compat with 5.1 php5.x
+    * "tar zxvf wordpress-5.1.2.tar.gz" to create wordpress directory.
 
->         "tar zxvf wordpress-5.1.2.tar.gz" to create wordpress directory.
-
-> 3: Copy over wp-config.php Keep each systems creditials in comments and uncomment next system.
+* Copy over wp-config.php Keep each systems creditials in comments and uncomment next system.
 
 **BACKUP on system to recreate Wordpress page.**
 

@@ -6,7 +6,7 @@
 Plugin Name: RSS Seed Feed App 
 Plugin URI: http://userspace.org
 Description: This app gathers RSS feed data from selected site and requires the AppLepie project plugin.  
-Version: 0.9.10
+Version: 0.9.11
 Author: Daniel Yount IcarusFactor
 Author URI: http://userspace.org
 License: GPLv2 or later
@@ -86,6 +86,16 @@ if ( !class_exists( 'seedfeedAppLe' ) && class_exists( 'AppLePiePlugin' )  ) {
 			$Content = $ApplepiePlugin->feed_generate_header();
 			list( $permrss, $titlerss , $daterss , $contentrss ) = $ApplepiePlugin->feed_generate_process( $a['rss']  ,intval($a['count']), $a['media'],$a['id'] );
                        
+			//Error check
+			if( empty( $permrss ) || empty( $titlerss ) || empty( $daterss ) || empty( $contentrss )  ){
+                                $dat = array();
+				if( empty( $permrss ) { $dat[0] = 1 } 
+				if( empty( $titlerss ) { $dat[1] = 1 } 
+				if( empty( $daterss ) { $dat[2] = 1 } 
+				if( empty( $contentrss ) { $dat[3] = 1 } 
+				error_log("WARNING:Some RSS data from ".$a['rss']." is not being retreived ".$dat[0].":".$dat[1].":".$dat[2].":".$dat[3] , 0);	
+			        }
+
 
                         //the output only uses one item, will make this loop to count in future. 
  
