@@ -1,3 +1,5 @@
+![Userspace.org](../Media/USO_LOGO3.png)
+
 # USERSPACEORG
 
 FOSS code for community website setup of server and development system. 
