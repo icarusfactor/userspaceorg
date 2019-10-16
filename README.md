@@ -37,53 +37,53 @@ In the future I will make HOWTO setup the site  for each step as follows.
     * USE wordpress;
     * GRANT ALL PRIVILEGES ON wordpress.* TO "userspace"@"localhost" IDENTIFIED BY "notmypassword";
 
-> 9:Change wordpress login password to current system.  
+  * Change wordpress login password to current system.  
 
->      ONLINE GERNATE MD5HASH: http://www.miraclesalad.com/webtools/md5.php
+  * ONLINE GERNATE MD5HASH: http://www.miraclesalad.com/webtools/md5.php
 
->      OR
+   OR
 
->      A: Get an MD5 hash of your password.
+  * Get an MD5 hash of your password.
 
->         On Unix/Linux:
+     * On Unix/Linux:
 
->         Create a file called wp.txt, containing nothing but the wordpress admin password.
+  * Create a file called wp.txt, containing nothing but the wordpress admin password.
 
->         tr -d ‘\r\n’ < wp.txt | md5sum | tr -d ‘ -‘
+     * tr -d ‘\r\n’ < wp.txt | md5sum | tr -d ‘ -‘
 
->         rm wp.txt    
+     * rm wp.txt    
 
->      B: login into mysql  UPDATE wp_users SET user_pass="tc4dlsd67888dkf3662c86818b9df302314" WHERE ID = 1;
+  * login into mysql  UPDATE wp_users SET user_pass="tc4dlsd67888dkf3662c86818b9df302314" WHERE ID = 1;
 
->         1:“use (name-of-database)” (select WordPress database)
+     * “use (name-of-database)” (select WordPress database)
 
->         2:“show tables;” (you’re looking for a table name with “users” at the end)
+     * “show tables;” (you’re looking for a table name with “users” at the end)
 
->         3:“SELECT ID, user_login, user_pass FROM (name-of-table-you-found);” (this gives you an idea of what’s going on inside)
+     * “SELECT ID, user_login, user_pass FROM (name-of-table-you-found);” (this gives you an idea of what’s going on inside)
 
->         4:“UPDATE (name-of-table-you-found) SET user_pass=”(MD5-string-you-made)” WHERE ID = (id#-of-account-you-are-reseting-password-for);” (actually changes the password)
+     * “UPDATE (name-of-table-you-found) SET user_pass=”(MD5-string-you-made)” WHERE ID = (id#-of-account-you-are-reseting-password-for);” (actually changes the password)
 
->         5:“SELECT ID, user_login, user_pass FROM (name-of-table-you-found);” (confirm that it was changed)
+     * “SELECT ID, user_login, user_pass FROM (name-of-table-you-found);” (confirm that it was changed)
 
->         6: "exit" mysql
+     * "exit" mysql
       
-> 10: Change permissions on files and directoies in alignment with httpd process.
+  * Change permissions on files and directoies in alignment with httpd process.
 
->       This will let you update plughins to wordpress. 
+     * This will let you update plughins to wordpress. 
 
-> cd /var/www/html/wordpress/
+     * cd /var/www/html/wordpress/
 
-> chown -R www-data ./wp-content/*
+     * chown -R www-data ./wp-content/*
 
-> chown  www-data ./wp-content/
+     * chown  www-data ./wp-content/
 
-> chgrp  www-data ./wp-content/
+     * chgrp  www-data ./wp-content/
 
-> chgrp -R  www-data ./wp-content/*    
+     * chgrp -R  www-data ./wp-content/*    
 
-> 11:Install Upfdraft pluign. Actvate.
+     * 11:Install Upfdraft pluign. Actvate.
 
-> 12: SETTINGS->UPDRAFTPLUS BACKUPS and Install "plugins" compressed file with.
+ * SETTINGS->UPDRAFTPLUS BACKUPS and Install "plugins" compressed file with.
 
 >        Themes and Plugins. (plugin will have to be written to move from dev to prod. ) 
 
