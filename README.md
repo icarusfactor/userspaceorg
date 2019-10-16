@@ -69,7 +69,7 @@ In the future I will make HOWTO setup the site  for each step as follows.
       
   * Change permissions on files and directoies in alignment with httpd process.
 
-     * This will let you update plughins to wordpress. 
+     * This will let you update plugins to wordpress. 
 
      * cd /var/www/html/wordpress/
 
@@ -85,52 +85,52 @@ In the future I will make HOWTO setup the site  for each step as follows.
 
  * SETTINGS->UPDRAFTPLUS BACKUPS and Install "plugins" compressed file with.
 
->        Themes and Plugins. (plugin will have to be written to move from dev to prod. ) 
+     * Themes and Plugins. (plugin will have to be written to move from dev to prod. ) 
 
->        Dont do this for "uploads" most likly will be too large. 
+     * Dont do this for "uploads" most likly will be too large. 
 
-> 13: Activate pluigns that you use.        
+     * Activate pluigns that you use.        
 
-> 14: Copy over compressed file images to the Upload directory and decompress.
+* Copy over compressed file images to the Upload directory and decompress.
        
-> 14: Tools-> IMPORT:
+     * Tools-> IMPORT:
 
->   install WordPress importer. 
+     * install WordPress importer. 
 
->   Run importer.
+     * Run importer.
 
->   Pick file you created earlier from TOOLS->EXPORT
+     * Pick file you created earlier from TOOLS->EXPORT
    
-> 15: Install and activate Fix Media Library.  
+* Install and activate Fix Media Library.  
 
->       Just check Regernate Thumbnails and start processing.
+     * Just check Regernate Thumbnails and start processing.
        
-> 16: Random Mix
+* Random Mix
 
->        Menu Item is not working : Had to save again. APPEARANCE->MENUS
+     * Menu Item is not working : Had to save again. APPEARANCE->MENUS
 
->        I also changed menu item icons to thumbnail size. 
+     * I also changed menu item icons to thumbnail size. 
         
-> 17: Wordsquest needs to be added to the DB. Then activate plugin.
+* Wordsquest needs to be added to the DB. Then activate plugin.
 
->         scp words.sql to next server.  
+     * scp words.sql to next server.  
 
->        mysql  wordpress < words.sql
+     * mysql  wordpress < words.sql
    
-> 18: Permalinks were not working , had to go to SETTING->PERMALINKS and SAVE.
+* Permalinks were not working , had to go to SETTING->PERMALINKS and SAVE.
 
->    This will regenerate your .htaccess file. 
+     * This will regenerate your .htaccess file. 
   
-> 19: If you still have problems with 404 and your permalinks. Check the apache2
+* If you still have problems with 404 and your permalinks. Check the apache2
 
-> configs or in sites enabled for "AllowOverride None" Change None to All. If you
+configs or in sites enabled for "AllowOverride None" Change None to All. If you
 
-> dont have access to the apache2 configs, Changing permalinks type may work. 
+dont have access to the apache2 configs, Changing permalinks type may work. 
 
-> You may need to install the mbstirng package if video/audio pages are not working.
+* You may need to install the mbstirng package if video/audio pages are not working.
 
-> Debian/Ubuntu "sudo apt-get install php-mbstring"
+  * Debian/Ubuntu "sudo apt-get install php-mbstring"
 
-> Redhat/CentOS "sudo yum install php-mbstring"
+  * Redhat/CentOS "sudo yum install php-mbstring"
 
 
