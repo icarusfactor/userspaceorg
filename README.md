@@ -18,27 +18,24 @@ In the future I will make HOWTO setup the site  for each step as follows.
 
 **BACKUP on system to recreate Wordpress page.**
 
-> 4: Backup all your files with UPDRAFT minus database file.
+  * Backup all your files with UPDRAFT minus database file.
 
-> 3: Export All Content TOOLS->EXPORT  will give you an *migrate<TIMESTAMP>.sql
+  * Export All Content TOOLS->EXPORT  will give you an *migrate<TIMESTAMP>.sql
 
-> 4: Save DB using WP Migrate DB to convert DNS name to local testing IP.
+  * Save DB using WP Migrate DB to convert DNS name to local testing IP.
 
-> 5: Compress all of the images from upload directory and copy to next system.
+  * Compress all of the images from upload directory and copy to next system.
 
-> 6: SETTINGS->Updraft Plus plugins backup "plugins" and download compressed file.
+  * SETTINGS->Updraft Plus plugins backup "plugins" and download compressed file.
 
 **Restore to next system.**
 
-> 7: Migrate sql into systems DB.  
+  * Migrate sql into systems DB.  
+    * mysql  wordpress < userspa2_wordpress-migrate-20191008215324.sql 
 
->       mysql  wordpress < userspa2_wordpress-migrate-20191008215324.sql 
-
-> 8:Overwrite database username and password for local system to match wp-config.php   
-
->      USE wordpress;
-
->       GRANT ALL PRIVILEGES ON wordpress.* TO "userspace"@"localhost" IDENTIFIED BY "notmypassword";
+  * Overwrite database username and password for local system to match wp-config.php   
+    * USE wordpress;
+    * GRANT ALL PRIVILEGES ON wordpress.* TO "userspace"@"localhost" IDENTIFIED BY "notmypassword";
 
 > 9:Change wordpress login password to current system.  
 
