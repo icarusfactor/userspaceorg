@@ -211,6 +211,9 @@ Slave_SQL_Running: Yes
   ##### NOTE: ADD HOW TO RESYNC IN FUTURE 
     - But entails mostly going back over getting replication position and repeat. 
 
+
+## START LOCAL INSTALL OF WORDPRESS SYSTEM
+
 1. Install Wordpress 5.x php7.x and support libraries.
    ###### LOGON: webvm.dev
    
