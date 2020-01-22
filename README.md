@@ -7,8 +7,8 @@
 **CREATE DUPLICATE TEST SYSTEM**
 - - -
 
-== Setup VM for each of the systems ==
-== NOTE: Future setup I'm moving to virt-manager/virt-install for PXE boot from TFTP server ==
+== Setup VM for each of the systems==
+== NOTE: Future setup I'm moving to virt-manager/virt-install for PXE boot from TFTP server==
 
 1. Virtualbox VM for wordpress web server.
   - NAME webvm.dev 
@@ -31,8 +31,8 @@
   - Disk 15G min
   - Network Bridge
 
-== Setup DNS on each VM ==
-###### LOGON: webvm.dev ######
+==Setup DNS on each VM==
+###### LOGON: webvm.dev 
 `vim /etc/hosts.net`
 ```
 localhost 127.0.0.1
@@ -40,18 +40,22 @@ webvm.dev 192.168.1.10
 dbvmA.dev 192.168.1.11
 dbvmB.dev 192.168.1.12
 ```
-###### REPEAT ABOVE & LOGON: dbvmA.dev, dbvmB.dev, localhost ######
+###### REPEAT ABOVE & LOGON: dbvmA.dev, dbvmB.dev, localhost
 
-##### Setup a users and wordpress database with maria DB. #####
+##### Setup a users and wordpress database with Maria DB. 
 
 1. Install mysql server on primary database vm
-   ###### LOGON: dbvmA.dev ######
+   ###### LOGON: dbvmA.dev 
 	` sudo apt-get install mysql-server mysql-client -y`
-    ###### For production servers, dont bother with it for dev systems. ######
+	
+	###### For production servers, don't bother with it for dev systems.
     `sudo mysql_secure_installation`
-    ###### Edit config file for primary SQL server ######
-   ` sudo vim /etc/mysql/mariadb.conf.d/50-server.cnf`
-   ```
+    
+    ###### Edit config file for primary SQL server
+    
+   `sudo vim /etc/mysql/mariadb.conf.d/50-server.cnf`
+    
+  ```
 [mysqld]
 bind-address            = dbvmA.dev
 server-id              = 1
@@ -66,17 +70,19 @@ sync-relay-log = 1
 sync-relay-log-info = 1
 sync-master-info = 1
    ```
+   
    - Restart Mysql Service
 `sudo service mysqld restart`
 
 1. Install mysql server on secondary database vm
-   ###### LOGON: dbvmB.dev ######
+   ###### LOGON: dbvmB.dev 
 	` sudo apt-get install mysql-server mysql-client -y`
-    ###### For production servers, dont bother with it for dev systems. ######
+    ###### For production servers, don't bother with it for dev systems. 
     `sudo mysql_secure_installation`
-    ###### Edit config file for primary SQL server ######
+    ###### Edit config file for primary SQL server 
    ` sudo vim /etc/mysql/mariadb.conf.d/50-server.cnf`
-   ```
+   
+ ```
 [mysqld]
 bind-address            = dbvmA.dev
 server-id              = 2
@@ -90,46 +96,48 @@ sync-binlog = 1
 sync-relay-log = 1
 sync-relay-log-info = 1
 sync-master-info = 1
-   ```
+```
+
    - Restart Mysql Service
 `sudo service mysqld restart`
 
 1. Setup named wordpress admin user of database.
-   == NOTE: admin needs full access to the wordpress database ==
-   ###### LOGON: dbvmA.dev ######
+   ==NOTE: admin needs full access to the wordpress database==
+   ###### LOGON: dbvmA.dev 
      - CREATE USER 'webuser'@'webvm.dev' identified by '123456';
      - GRANT ALL ON *.* TO 'webuser'@'%.webvm.dev';
       
-   ###### LOGON: dbvmB.dev ######
+   ###### LOGON: dbvmB.dev 
      - CREATE USER 'webuser'@'webvm.dev' identified by '123456';
      - GRANT ALL ON *.* TO 'webuser'@'%.webvm.dev';  
      
 1. Setup wordpress replication user for master-master database.
-   == NOTE: replication only needs access to each other wordpress database ==
-   ###### LOGON: dbvmA.dev ######
+   ==NOTE: replication only needs access to each other wordpress database==
+   ###### LOGON: dbvmA.dev 
      - CREATE USER 'repl_user'@'dbvmB' identified by '123456';
      - GRANT REPLICATION SLAVE ON wordpress.* TO 'repl_user'@'%.dbvmB.dev';
      - FLUSH PRIVILEGES;
      
-   ###### LOGON: dbvmB.dev ######
+   ###### LOGON: dbvmB.dev 
     - CREATE USER 'repl_user'@'dbvmA' identified by '123456';
     - GRANT REPLICATION SLAVE ON wordpress.* TO 'repl_user'@'%.dbvmA.dev';
     - FLUSH PRIVILEGES;
 
-1. Setup empty database for wordpress instaltion to fill.
-   ###### LOGON: dbvmA.dev ######
+1. Setup empty database for wordpress installation to fill.
+   ###### LOGON: dbvmA.dev
      - CREATE DATABASE wordpress;
      
-   ###### LOGON: dbvmB.dev ######
+   ###### LOGON: dbvmB.dev
      - CREATE DATABASE wordpress;  
 
 1. Get Replication position on primary database.
-  ###### LOGON: dbvmA.dev ######
-  ```
-mysql> use wordpress;
+  ###### LOGON: dbvmA.dev
+
+` mysql> use wordpress; `
 mysql> FLUSH TABLES WITH READ LOCK;
-  ```
-  ###### LOGON: dbvmA.dev again in another console ######
+
+
+###### LOGON: dbvmA.dev again in another console
   `mysql -uroot --vertical -e "show master status;"`
 
    ```
@@ -139,7 +147,7 @@ mysql> FLUSH TABLES WITH READ LOCK;
 | mysql-bin.000001 |      455 | wordpress    | mysql            |                   |
 +------------------+----------+--------------+------------------+-------------------+
 1 row in set (0.00 sec)
-   ```
+```
    
 1. Dump mysql database to raw sql file.
   `mysqldump -uroot -p wordpress > dbvmA.sql`
@@ -151,67 +159,68 @@ mysql> FLUSH TABLES WITH READ LOCK;
 ```
 
 1. Copy database to secondary database server.
-   ###### LOGON: dbvmA.dev ######
-   `scp ./dbvmA.sql datasci@dbvmB.dev:/tmp/dbvmA.sql `
+   ###### LOGON: dbvmA.dev 
+   `scp ./dbvmA.sql datasci@dbvmB.dev:/tmp/dbvmA.sql`
 
 1. Import database from primary database into secondary database.
-   ###### LOGON: dbvmB.dev ######
+   ###### LOGON: dbvmB.dev
    `mysql -uroot -p wordpress < /tmp/dbvmA.sql`
 
 1. Get Replication position on secondary database.
   `mysql -uroot --vertical -e "show master status;"`
 
-   ```
+ ```
 +------------------+----------+--------------+------------------+-------------------+
 | File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
 +------------------+----------+--------------+------------------+-------------------+
 | mysql-bin.000001 |     1426 | wordpress    | mysql            |                   |
 +------------------+----------+--------------+------------------+-------------------+
 1 row in set (0.00 sec)
-   ```
+```
 
 1. Start replication on secondary database.
-   ```
+  ```
 mysql> STOP SLAVE;
 mysql> CHANGE MASTER TO master_host='dbvmA.dev', master_port=3306, master_user='repl_user', master_password='12345', master_log_file='mysql-bin.000001', master_log_pos=455;
 mysql> START SLAVE;
    ```
 
 1. Start replication on primary database.
-   ###### LOGON: dbvmA.dev ######
-   ```
+   ###### LOGON: dbvmA.dev
+  ```
 mysql> STOP SLAVE;
 mysql> CHANGE MASTER TO master_host='dbvmB.dev', master_port=3306, master_user='repl_user', master_password='12345', master_log_file='mysql-bin.000001', master_log_pos=1426;
 mysql> START SLAVE;
    ```
 
 1. Verify on each server that replication is working on each.
-   ###### LOGON: dbvmA.dev ######
+   ###### LOGON: dbvmA.dev
    `mysql -uroot --vertical -e "show slave status;"`
-   ```
+  ```
 Slave_IO_Running: Yes
 Slave_SQL_Running: Yes
-   ```
-   ###### LOGON: dbvmB.dev ######
+```
+   ###### LOGON: dbvmB.dev
    `mysql -uroot --vertical -e "show slave status;"`
-   ```
+```
 Slave_IO_Running: Yes
 Slave_SQL_Running: Yes
    ```
    
 1. If you have Connecting or No on either database you will have to resync.
   ==NOTE: ADD HOW TO RESYNC IN FUTURE ==
-    - But intails mostly going back over of item *11* , *12* , *13*
+    - But entails mostly going back over of item *11* , *12* , *13*
 
 1. Install Wordpress 5.x php7.x and support libraries.
-   ###### LOGON: webvm.dev ######
-   == URL: for download: https://wordpress.org/download/releases/ ==
+   ###### LOGON: webvm.dev
+   
+   ==URL: for download: https://wordpress.org/download/releases/==
     - cd /var/www/html/
     - wget https://wordpress.org/wordpress-5.3.2.tar.gz
     - tar zxvf wordpress-5.3.2.tar.gz
     - sudo apt-get install php7.3 php7.3-mysql php7.3-curl php7.3-gd php7.3-mbstring php7.3-xml php7.3-xmlrpc php7.3-soap php7.3-intl php7.3-zip
 
-    - Copy *wp-config.php* from remote system and keep each systems creditials in comments.
+    - Copy *wp-config.php* from remote system and keep each systems credentials in comments.
     - Uncomment for local development or production remote system.
 
 1. BACKUP on system to recreate Wordpress page.
@@ -229,8 +238,8 @@ Slave_SQL_Running: Yes
      - Change HOSTNAME data in *common5.js* , *init4.js*
 
 1. RESTORE to local development system.
-  ###### LOGON: dbvmA.dev ######
-  == NOTE: You should have already installed/setup DB for master-master replaication. ==
+  ###### LOGON: dbvmA.dev
+  ==NOTE: You should have already installed/setup DB for master-master replaication.==
     * Migrate only wordpress sql into systems DB.
      `mysql  wordpress < wordpress-migrate-20191008215324.sql` 
     * (OPTIONAL)Change wordpress login password to current system.
@@ -242,7 +251,7 @@ Slave_SQL_Running: Yes
      * tr -d ‘\r\n’ < wp.txt | md5sum | tr -d ‘ -‘
      * rm wp.txt
 
-  ###### LOGON: dbvmA.dev ######
+  ###### LOGON: dbvmA.dev
     `UPDATE wp_users SET user_pass="tc4dlsd67888dkf3662c86818b9df302314" WHERE ID = 1;`
 
 1. OPTIONAL FIND admin user in detail.
@@ -257,7 +266,7 @@ Slave_SQL_Running: Yes
 
     - Install files you had downloaded from remote FTP server
 
-    == NOTE: This will let you update plugins to wordpress. ==
+    ==NOTE: This will let you update plugins to wordpress.==
     ```
     cd /var/www/html/wordpress/
     sudo find . -exec chown www-data:www-data {} +
@@ -265,22 +274,22 @@ Slave_SQL_Running: Yes
     sudo find . -type d -exec chmod 775 {} +
     sudo chmod 660 wp-config.php
     ```
-    == NOTE: So that you dont have to setup an FTP server. ==
+    ==NOTE: So that you don't have to setup an FTP server.==
 
     ` echo "define('FS_METHOD','direct');" >> wp-config.php`
-    ###### LOGON: webvm.dev wordpress ######
+    ###### LOGON: webvm.dev wordpress
     `URL: http://webvm.dev/wp-admin/`
 
 1.  Install/Activate Plugins,Fix Media Library.
 
-     - Just check Regernate Thumbnails and start processing.
+     - Just check Regenerate Thumbnails and start processing.
 
 1. Random Mix
 
      - Widget Item not working : Had to save again. APPEARANCE->MENUS
      - I also changed menu item icons to thumbnail size. 
 
-1. Wordsquest, if new words need to be overwiten to DB. Then reactivate plugin.
+1. Wordsquest, if new words need to be overwritten to DB. Then reactivate plugin.
 
      - scp words.sql to dbvmA.dev server.
      - mysql  wordpress < words.sql
@@ -295,18 +304,18 @@ Slave_SQL_Running: Yes
 
 1. Setup CRON to PING site and set off WPCRON functions for updating my site cache
    == NOTE: May use free account on https://uptimerobot.com in future.==
-   ###### LOGON: local system ######
+   ###### LOGON: local system
   ```
  mkdir /usr/local/cron/
-   vim /usr/local/cron/updateRSScache.sh
+ vim /usr/local/cron/updateRSScache.sh
+curl -v --silent http://userspace.org/ 2>&1 | grep Words   
+crontab -e
+0 */2 * *  root /usr/local/cron/updateRSScache.sh
 ```
-   `curl -v --silent http://userspace.org/ 2>&1 | grep Words`   
-   `crontab -e`
-   `0 */2 * *  root /usr/local/cron/updateRSScache.sh`
 
 1. Add Hyperdb to Wordpress for load balance,fail-over,replication and cache.
-   ==NOTE: This maybe already instaled in your FTP download , but want to show manual add. ==
-   ###### LOGON: webvm.dev ######
+   ==NOTE: This maybe already instaled in your FTP download , but want to show manual add.==
+   ###### LOGON: webvm.dev
     * Download zip "wget https://downloads.wordpress.org/plugin/hyperdb.zip"
     * Unzip "unzip hyperdb.zip"
     * Move config to /var/www/html/db-config.php
@@ -316,15 +325,15 @@ Slave_SQL_Running: Yes
 
 1. Install REDIS for object caching.
    ###### LOGON: URL: http://webvm.dev/wp-admin/ ######
-   - Install REDIS Wordpress pluign and activate.
-   ###### LOGON: dbvmA.dev ######
-   ==NOTE: Will only setup one of these and not distrubuted, but could be. ==
+   - Install REDIS Wordpress plugin and activate.
+   ###### LOGON: dbvmA.dev
+   ==NOTE: Will only setup one of these and not distrubuted, but could be.==
    ` apt-get install php-redis redis-server`
     `vim /etc/redis/redis.conf`
       - Add bind address
       - Uncomment auth password
       - Add segment to wp-config.php
-      ###### LOGON: webvm.dev ######
+      ###### LOGON: webvm.dev
 ```
 $redis_server = array(
             'host'     => 'dbvmA.dev',
@@ -335,13 +344,8 @@ $redis_server = array(
 ```
 
 1. Test to see if REDIS object cache its working.
-   ###### LOGON: dbvmA.dev ######
+   ###### LOGON: dbvmA.dev
    `redis <host address>`
-  ```
-    auth 12345
-    keys *
-```
-
-
-
-
+   `  auth 12345  `
+   `  keys * `
+ 
