@@ -3,7 +3,7 @@
  * Plugin Name: Hack for turning off LOADING screen across all browsers.
  * Plugin URI: http://www.userspace.org
  * Description: Hack for turning off loading screen.
- * Version: 1.0.0
+ * Version: 2.0.0
  * Author: Daniel Yount
  * Author URI: https://www.userspace.org
  * License: GPLv2 or later
@@ -30,6 +30,6 @@ function wp_loadingoff_init(){
 function wp_loadingoff_shortcode_callback(){
 
 	/* Output script to remove lading screen in 1.5 seconds */
-	return "<script> $('.loadmedia').delay(1500).hide(); </script>";
+	return "<script> $('#loading').delay(1000).modal('hide'); </script>";
 }
 

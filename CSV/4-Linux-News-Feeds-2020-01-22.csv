@@ -1,0 +1,42 @@
+SITE,URL,RSS URL,TOPIC,APLF
+LINUXTODAY,http://linuxtoday.com,https://www.linuxtoday.com/biglt.rss,Linux Headline News,1
+DISTROWATCH,http://distrowatch.com,http://distrowatch.com/news/dw.xml,Linux Distribution Information,1
+LINUX,http://www.linux.com,https://www.linux.com/rss/feeds.php,Linux Industry News,1
+LINOXIDE,https://linoxide.com,https://linoxide.com/feed/,Linux Tips,1
+NixCraft,http://cyberciti.biz,http://cyberciti.biz/feed,Linux Info,1
+Tecmint,http://tecmint.com,http://tecmint.com/feed,Linux News,1
+Linux Foundation,http://www.linuxfoundation.org/newsroom/,https://linuxfoundation.org/feed,Linux General News,1
+Linux Magazine,http://www.linux-magazine.com,http://www.linux-magazine.com/rss/feed/lmi_full,Linux News,1
+Slashdot,http://linux.slashdot.org,http://rss.slashdot.org/Slashdot/slashdotLinux,Linux news,1
+Reddit,http://reddit.com/r/linux,http://reddit.com/r/linux/.rss,Linux News,1
+RedHat,http://rhelblog.redhat.com,https://www.redhat.com/en/rss/blog/channel/red-hat-enterprise-linux,RedHat News,1
+SuSe,http://suse.com/communities/blog/,http://suse.com/communities/blog/feed,SuSe News,1
+Softpedia,http://linux.softpedia.com,http://linux.softpedia.com/backend.xml,Linux News,1
+ITS FOSS,http://itsfoss.com,http://itsfoss.com/feed,Linux News,1
+Google News,https://news.google.com,https://news.google.com/rss/search?cf=all&pz=1&q=linux&hl=en-US&gl=US&ceid=US:en,Linux News,1
+Phoronix,http://phoronix.com,http://phoronix.com/rss.php,Linux Hardware News,1
+LinuxAcademy,https://linuxacademy.com/blog/,https://linuxacademy.com/blog/feed/,Linux News,1
+UNIXMEN,http://www.unixmen.com,http://unixmen.com/feed,Linux News,0
+NOOBSLAB,http://noobslab.com,https://www.blogger.com/feeds/5398236625900904090/posts/default,Linux News,0
+Blackmoreops,http://www.blackmoreops.com,http://feeds.feedburner.com/bmofeed,Linux News,1
+Cloudlinux,https://www.cloudlinux.com/component/easyblog/,https://www.cloudlinux.com/component/easyblog/?format=feed&type=rss&Itemid=292/feed,Cloud Linux News,1
+LinuxAndUbuntu,http://www.linuxandubuntu.com,http://www.linuxandubuntu.com/feed,Ubuntu Linux News,1
+ThisHosting.Rocks,https://thishosting.rocks/feed/,https://thishosting.rocks/feed/,Linux Hosting News,1
+GamingOnLinux,https://www.gamingonlinux.com,https://www.gamingonlinux.com/article_rss.php,Linux Gaming,1
+OsTechnix,https://www.ostechnix.com,https://www.ostechnix.com/feed/,Server News,1
+Linuxnix,https://www.linuxnix.com,https://www.linuxnix.com/feed/,Linux and Unix News,1
+Kali Tutorials,https://www.kalitutorials.net,https://www.kalitutorials.net/feeds/posts/default,Kali Linux and Security News,1
+Linux Links,https://www.linuxlinks.com,https://www.linuxlinks.com/feed/,Linux News,1
+Linuxtech,https://www.linuxtechi.com,https://www.linuxtechi.com/feed/,Linux News,1
+LinuxInsider,https://www.linuxinsider.com,https://www.linuxinsider.com/perl/syndication/rssfull.pl,Linux News,1
+Unixunderground,http://unixunderground.com,http://unixunderground.com/?feed=rss2,Unix Networking News,1
+Opensource,https://opensource.com,https://opensource.com/feed,Linux News,1
+Superuser,http://superuser.openstack.org,http://superuser.openstack.org/feed,OpenInfrastructure News,1
+Tech Rights,http://techrights.org,http://techrights.org/feed/,Technology Rights,0
+Linux Kernel Mailing List,https://www.lkml.org,https://www.lkml.org/rss.php,Kernel Coding.,1
+FSF News,https://www.fsf.org,https://static.fsf.org/fsforg/rss/news.xml,Free Software News,1
+FSF Blog,https://www.fsf.org/blogs,https://static.fsf.org/fsforg/rss/blogs.xml,Free Software Blog,1
+CyberPunk,https://n0where.net,http://feeds.feedburner.com/n0where,Open Source Security,1
+The Hacker News,https://thehackernews.com/,https://feeds.feedburner.com/TheHackersNews,Internet Security,1
+Linux Security,https://linuxsecurity.com/,https://linuxsecurity.com/linuxsecurity_articles.xml,Internet Security,1
+Fedora Magazine,https://fedoramagazine.org,https://fedoramagazine.org/feed/,Fedora Topics,1

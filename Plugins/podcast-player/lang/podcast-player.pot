@@ -1,0 +1,470 @@
+# Podcast Player.
+# Copyright (C) 2019 vedathemes
+# This file is distributed under the same license as the PACKAGE package.
+# Vedathemes <contact@vedathemes.com>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: podcast-player 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-18 21:18+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: backend/class-backend.php:131 backend/class-backend.php:133
+msgid "Set Image"
+msgstr ""
+
+#: backend/class-backend.php:132
+msgid "Select"
+msgstr ""
+
+#: backend/class-backend.php:258
+msgid ""
+"Thanks for trying/updating Podcast Player. The latest update contains few "
+"critical error fixes."
+msgstr ""
+
+#: backend/class-backend.php:260
+msgid "Raise a support request"
+msgstr ""
+
+#: backend/class-backend.php:262
+msgid "Give us 5 stars rating"
+msgstr ""
+
+#: backend/class-backend.php:301 backend/inc/class-widget.php:854
+msgid "Default Player"
+msgstr ""
+
+#: backend/class-backend.php:305 backend/inc/class-widget.php:858
+msgid "Legacy Player"
+msgstr ""
+
+#: backend/inc/class-options.php:56 backend/inc/class-options.php:57
+#: backend/inc/class-widget.php:127
+msgid "Podcast Player"
+msgstr ""
+
+#: backend/inc/class-options.php:80
+msgid "Podcast Player Options"
+msgstr ""
+
+#: backend/inc/class-options.php:87
+msgid "Switch back to legacy player"
+msgstr ""
+
+#: backend/inc/class-options.php:114
+msgid ""
+"If you are not happy with latest design of the player, you can switch back "
+"to the older design. Just check the box below and click save button."
+msgstr ""
+
+#: backend/inc/class-options.php:115
+msgid ""
+"Also, kindly help us to improve the latest design. Give your improvement "
+"suggestions at "
+msgstr ""
+
+#: backend/inc/class-options.php:147
+msgid "Save"
+msgstr ""
+
+#: backend/inc/class-player.php:368
+msgid "Incorrect Feed URL entered"
+msgstr ""
+
+#: backend/inc/class-widget.php:124
+msgid "Create a podcast player widget."
+msgstr ""
+
+#: backend/inc/class-widget.php:230
+msgid "None"
+msgstr ""
+
+#: backend/inc/class-widget.php:233
+msgid "Light"
+msgstr ""
+
+#: backend/inc/class-widget.php:234
+msgid "Dark"
+msgstr ""
+
+#: backend/inc/class-widget.php:238
+msgid "From FeedURL"
+msgstr ""
+
+#: backend/inc/class-widget.php:239
+msgid "From Posts"
+msgstr ""
+
+#: backend/inc/class-widget.php:240
+msgid "From Audio/Video Link"
+msgstr ""
+
+#: backend/inc/class-widget.php:244
+msgid "Title Descending"
+msgstr ""
+
+#: backend/inc/class-widget.php:245
+msgid "Title Ascending"
+msgstr ""
+
+#: backend/inc/class-widget.php:246
+msgid "Date Descending"
+msgstr ""
+
+#: backend/inc/class-widget.php:247
+msgid "Date Ascending"
+msgstr ""
+
+#: backend/inc/class-widget.php:251
+msgid "Top Left Cropping"
+msgstr ""
+
+#: backend/inc/class-widget.php:252
+msgid "Top Center Cropping"
+msgstr ""
+
+#: backend/inc/class-widget.php:253
+msgid "Center Cropping"
+msgstr ""
+
+#: backend/inc/class-widget.php:254
+msgid "Bottom Left Cropping"
+msgstr ""
+
+#: backend/inc/class-widget.php:255
+msgid "Bottom Center Cropping"
+msgstr ""
+
+#: backend/inc/class-widget.php:259
+msgid "No Cropping"
+msgstr ""
+
+#: backend/inc/class-widget.php:260
+msgid "Landscape (4:3)"
+msgstr ""
+
+#: backend/inc/class-widget.php:261
+msgid "Landscape (3:2)"
+msgstr ""
+
+#: backend/inc/class-widget.php:262
+msgid "Portrait (3:4)"
+msgstr ""
+
+#: backend/inc/class-widget.php:263
+msgid "Portrait (2:3)"
+msgstr ""
+
+#: backend/inc/class-widget.php:264
+msgid "Widescreen (16:9)"
+msgstr ""
+
+#: backend/inc/class-widget.php:265
+msgid "Square (1:1)"
+msgstr ""
+
+#: backend/inc/class-widget.php:273
+msgid "Title"
+msgstr ""
+
+#: backend/inc/class-widget.php:280
+msgid "Podcast Episodes"
+msgstr ""
+
+#: backend/inc/class-widget.php:287
+msgid "Podcast Feed URL"
+msgstr ""
+
+#: backend/inc/class-widget.php:296
+msgid "Select Post Type"
+msgstr ""
+
+#: backend/inc/class-widget.php:314
+msgid "Valid Audio/Video File Link (i.e, mp3, ogg, m4a etc.)"
+msgstr ""
+
+#: backend/inc/class-widget.php:318
+msgid "Episode Title"
+msgstr ""
+
+#: backend/inc/class-widget.php:322
+msgid "Podcast episode link for social sharing (optional)"
+msgstr ""
+
+#: backend/inc/class-widget.php:327 backend/inc/class-widget.php:458
+msgid "Hide Episode Download Link"
+msgstr ""
+
+#: backend/inc/class-widget.php:331 backend/inc/class-widget.php:463
+msgid "Hide Social Share Links"
+msgstr ""
+
+#: backend/inc/class-widget.php:339
+msgid "Player skin"
+msgstr ""
+
+#: backend/inc/class-widget.php:346
+msgid "Create Podcast Header Content"
+msgstr ""
+
+#: backend/inc/class-widget.php:346
+msgid "Change Podcast Content"
+msgstr ""
+
+#: backend/inc/class-widget.php:352
+msgid "Podcast Title"
+msgstr ""
+
+#: backend/inc/class-widget.php:359 backend/inc/class-widget.php:827
+#: backend/inc/class-widget.php:830
+msgid "Podcast Cover Image"
+msgstr ""
+
+#: backend/inc/class-widget.php:367
+msgid "Brief Description"
+msgstr ""
+
+#: backend/inc/class-widget.php:374
+msgid "Show full description in place of excerpt."
+msgstr ""
+
+#: backend/inc/class-widget.php:380
+msgid "Podcast Custom Menu"
+msgstr ""
+
+#: backend/inc/class-widget.php:386
+msgid "Number of episodes to show at a time."
+msgstr ""
+
+#: backend/inc/class-widget.php:392
+msgid "Excerpt Length"
+msgstr ""
+
+#: backend/inc/class-widget.php:398
+msgid "Show/Hide Player Items"
+msgstr ""
+
+#: backend/inc/class-widget.php:404
+msgid "Show Podcast Header by Default"
+msgstr ""
+
+#: backend/inc/class-widget.php:408
+msgid "Hide Podcast Header Information"
+msgstr ""
+
+#: backend/inc/class-widget.php:414
+msgid "Hide cover image"
+msgstr ""
+
+#: backend/inc/class-widget.php:420
+msgid "Hide Podcast Title"
+msgstr ""
+
+#: backend/inc/class-widget.php:426
+msgid "Hide Podcast Description"
+msgstr ""
+
+#: backend/inc/class-widget.php:431
+msgid "Hide Custom menu"
+msgstr ""
+
+#: backend/inc/class-widget.php:436
+msgid "Hide Podcast Search"
+msgstr ""
+
+#: backend/inc/class-widget.php:442
+msgid "Hide Episode Author/Podcaster Name"
+msgstr ""
+
+#: backend/inc/class-widget.php:448
+msgid "Hide Episode Text Content/Transcript"
+msgstr ""
+
+#: backend/inc/class-widget.php:453
+msgid "Hide Load More Episodes Button"
+msgstr ""
+
+#: backend/inc/class-widget.php:468
+msgid "Podcast Player Styling"
+msgstr ""
+
+#: backend/inc/class-widget.php:472
+msgid "Accent Color"
+msgstr ""
+
+#: backend/inc/class-widget.php:477
+msgid "Podcast Player Display Style"
+msgstr ""
+
+#: backend/inc/class-widget.php:483
+msgid "Thumbnail Cropping"
+msgstr ""
+
+#: backend/inc/class-widget.php:489
+msgid "Thumbnail Cropping Position"
+msgstr ""
+
+#: backend/inc/class-widget.php:494
+msgid "Maximum Grid Columns"
+msgstr ""
+
+#: backend/inc/class-widget.php:499
+msgid "Sort & Filter Options"
+msgstr ""
+
+#: backend/inc/class-widget.php:504
+msgid "Sort Podcast Episodes By"
+msgstr ""
+
+#: backend/inc/class-widget.php:509
+msgid "Show episodes only if title contains following"
+msgstr ""
+
+#: backend/inc/class-widget.php:675
+msgid "Get Episodes by Taxonomy"
+msgstr ""
+
+#: backend/inc/class-widget.php:705
+msgid "Select Terms"
+msgstr ""
+
+#: backend/inc/class-widget.php:834
+msgid "Click the image to edit/update"
+msgstr ""
+
+#: backend/inc/class-widget.php:835
+msgid "Remove Featured Image"
+msgstr ""
+
+#: bridge/functions.php:28
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: bridge/functions.php:33
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: frontend/class-frontend.php:252 frontend/class-frontend.php:259
+#: frontend/class-frontend.php:334 frontend/class-frontend.php:349
+msgid "15"
+msgstr ""
+
+#: frontend/inc/class-display.php:32
+#: frontend/legacy/podcast-player-public-display.php:48
+msgid "No Items Found. Try again later."
+msgstr ""
+
+#: frontend/inc/class-display.php:80
+msgid "Podcast Details"
+msgstr ""
+
+#: frontend/inc/class-display.php:94
+#: frontend/legacy/podcast-player-public-display.php:113
+msgid "Download"
+msgstr ""
+
+#: frontend/inc/class-display.php:110
+#: frontend/legacy/podcast-player-public-display.php:119
+msgid "Share on"
+msgstr ""
+
+#: frontend/inc/class-display.php:111
+#: frontend/legacy/podcast-player-public-display.php:120
+msgid "facebook"
+msgstr ""
+
+#: frontend/inc/class-display.php:112
+#: frontend/legacy/podcast-player-public-display.php:121
+msgid "twitter"
+msgstr ""
+
+#: frontend/inc/class-display.php:113
+#: frontend/legacy/podcast-player-public-display.php:122
+msgid "linkedin"
+msgstr ""
+
+#: frontend/inc/class-display.php:114
+#: frontend/legacy/podcast-player-public-display.php:123
+msgid "email"
+msgstr ""
+
+#: frontend/inc/class-display.php:127
+#: frontend/legacy/podcast-player-public-display.php:57
+msgid "Search Episodes"
+msgstr ""
+
+#: frontend/inc/class-display.php:129
+#: frontend/legacy/podcast-player-public-display.php:59
+msgid "Clear Search Field"
+msgstr ""
+
+#: frontend/inc/class-feed.php:90
+msgid "RSS Error:"
+msgstr ""
+
+#: frontend/inc/class-feed.php:120
+msgid "Unknown Feed"
+msgstr ""
+
+#: frontend/inc/class-feed.php:133 frontend/inc/class-feed.php:160
+msgid "Podcast Subscription Menu"
+msgstr ""
+
+#: frontend/inc/class-feed.php:149
+msgid "Visit Website"
+msgstr ""
+
+#: frontend/inc/class-feed.php:152
+msgid "RSS Feed"
+msgstr ""
+
+#: frontend/inc/class-feed.php:168
+msgid "Follow"
+msgstr ""
+
+#: frontend/legacy/podcast-player-public-display.php:38
+msgid "more..."
+msgstr ""
+
+#: frontend/legacy/podcast-player-public-display.php:51
+msgid "Episodes"
+msgstr ""
+
+#: frontend/legacy/podcast-player-public-display.php:52
+msgid "Now Playing"
+msgstr ""
+
+#: frontend/legacy/podcast-player-public-display.php:84
+#: frontend/partials/podcast-player-public-display.php:162
+msgid "Load More"
+msgstr ""
+
+#: frontend/legacy/podcast-player-public-display.php:92
+#: frontend/partials/podcast-player-public-display.php:170
+msgid "Search Results placeholder"
+msgstr ""
+
+#: frontend/legacy/podcast-player-public-display.php:135
+msgid "View Episode"
+msgstr ""
+
+#: frontend/partials/podcast-player-public-display.php:71
+msgid "Close Single Episode"
+msgstr ""
+
+#: frontend/partials/podcast-player-public-display.php:80
+msgid "by"
+msgstr ""
+
+#: frontend/partials/podcast-player-public-display.php:131
+msgid "Episode play icon"
+msgstr ""

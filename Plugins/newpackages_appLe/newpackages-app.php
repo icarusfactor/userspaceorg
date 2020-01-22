@@ -6,7 +6,7 @@
 Plugin Name: New FOSS Packages RSS Feed App 
 Plugin URI: http://userspace.org
 Description: This app gathers RSS feed data for New FOSS Packages and requires the AppLepie project plugin.  
-Version: 0.8.12
+Version: 0.8.13
 Author: Daniel Yount IcarusFactor
 Author URI: http://userspace.org
 License: GPLv2 or later
@@ -81,6 +81,8 @@ if ( !class_exists( 'newpackagesAppLe' ) && class_exists( 'AppLePiePlugin' )  ) 
 			list( $permrss, $titlerss , $daterss , $contentrss ) = $ApplepiePlugin->feed_generate_process("https://distrowatch.com/news/dwp.xml", 6 );
 
 			$Content .= "<span style=\"font-size: 20px\">USERSPACE</span></br></br>"; 
+
+			$Content .= '<span style="font-size: 13px;line-height: 95%;"><a href="http://www.distrowatch.com" >[DistroWatch]</a></span></br>'; 
 			$Content .= '<span style="font-size: 13px;line-height: 95%;"><a href="'.$permrsslibc[1].'" >['.$titlersslibc[1].']</a></span></br>'; 
 
 			$Content .= '<span style="font-size: 13px;line-height: 95%;"><a href="http://www.linuxfromscratch.org" >[Build Your Own Distro]</a></span>'; 

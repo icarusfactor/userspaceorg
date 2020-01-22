@@ -6,7 +6,7 @@
 Plugin Name: AppLePie Plugin
 Plugin URI: http://userspace.org
 Description: Parent plugin for custom RSS feeds that use Simplepie and a custom css display box. 
-Version: 0.9.4
+Version: 0.9.6
 Author: Daniel Yount aka Icarus[factor]
 Author URI: http://userspace.org
 License: GPLv2 or later
@@ -34,6 +34,19 @@ Copyright 2019 Daniel Yount aka Icarus[factor], Inc.
 defined( 'ABSPATH' ) or die( 'Hey, what are you doing here? You silly human!' );
 
 if ( !class_exists( 'AppLePiePlugin' ) ) {
+
+
+// Include SimplePie                    
+//Test for older version of WP wont actualy do the once thing. 
+if (!class_exists('SimplePie_Autoloader')) {
+   include_once('inc/simplepie/autoloader.php');
+}
+if (!class_exists('idna_convert')) {
+   include_once('inc/simplepie/idn/idna_convert.class.php');
+}
+
+
+
 
 	class AppLePiePlugin
 	{
@@ -72,7 +85,7 @@ if ( !class_exists( 'AppLePiePlugin' ) ) {
 
 
 		function enqueue() {
-			wp_enqueue_style( 'applepiepluginstyle', plugins_url( '/assets/applepiestyle10.css', __FILE__ ) );
+			wp_enqueue_style( 'applepiepluginstyle', plugins_url( '/assets/applepiestyle11.css', __FILE__ ) );
 			//wp_enqueue_script( 'applepiepluginscript', plugins_url( '/assets/applepiescript.js', __FILE__ ) );
 		}
 
@@ -82,22 +95,15 @@ if ( !class_exists( 'AppLePiePlugin' ) ) {
 		}
 
                 //Send RSS feed: Send Max Number of Items to get: Get Title : Get Date : Get Content
-		function feed_generate_process( $rss_feed_url , $max_items=1 , $rss_media="APTEXT", $rss_id="TXTFEED" , $rss_height="300" ) {
+		function feed_generate_process( $rss_feed_url , $max_items=1 , $rss_media="APTEXT", $rss_id="TXTFEED" , $rss_height="260" ) {
 
                       $permrss = [];
                       $titlerss = [];
                       $daterss  = [];
                       $contentrss = [];
                       $i=0;
-
-                      // Include SimplePie                    
-                      //Test for older version of WP wont actualy do the once thing. 
-                      if (!class_exists('SimplePie_Autoloader')) {
-                         include_once('inc/simplepie/autoloader.php');
-                         }
-                      if (!class_exists('idna_convert')) {
-                         include_once('inc/simplepie/idn/idna_convert.class.php');
-                         }
+                      $atts= []; 
+                      
 
                      // Create a new instance of the SimplePie object
                      $feed = new SimplePie();                     
@@ -107,7 +113,7 @@ if ( !class_exists( 'AppLePiePlugin' ) ) {
                      $feed->force_feed(true);
 		     $feed->enable_cache(true); 
                      $feed->set_cache_location(plugin_dir_path( __FILE__ ).'cache');
-		     $feed->set_cache_duration(21600); //5 hours  3600 seconds = 1 hour
+		     $feed->set_cache_duration(10800); //3 hours  3600 seconds = 1 hour
                      $success = $feed->init();
                      $feed->handle_content_type();
 		    

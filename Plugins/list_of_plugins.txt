@@ -2,6 +2,10 @@ This is a list of the Wordpress plugins I use.
 
 STANDARD: All In One SEO : Controls robots.txt title and keywords of page for search engines.  
 
+STANDARD: Advanced Nocaptcha Recaptcha
+
+CUSTOM: Applepie Feed Manager : Updates RSS feeds in groups. Has bug against other admin plugins using jquery. Turn off when not using.  
+
 CUSTOM: AppLePie Plugin : Parent plugin for custom RSS feeds : By Daniel Yount 
 
 STNADARD: Carousel Slider :  By Sayful Islam
@@ -28,6 +32,7 @@ NOTE: Had to remove class via jquery so Jquery DataTables would work ,which was 
 
 STANDARD: podcast player : By vedathemes
 NOTE: My Audio Peel plugin uses this plugin.
+NOTE: I will add older version to my load. Newer version does not work.
 
 CUSTOM: RSS Audio Peel App : By Daniel Yount IcarusFactor
 
@@ -40,9 +45,6 @@ NOTE: Used for all of my dynamic feed pages
 STANDARD: TablePress : By Tobias Bäthge 
 NOTE: Had to add css and js to my functions.php and init datatable to common.js : Used for Citations
 
-STANDARD: UpdraftPlus - Backup/Restore : By UpdraftPlus.Com, DavidAnderson 
-NOTE: Used to backup/restore my Wordpress site. 
-
 STANDARD: Broken Link Checker. : By ManageWP
 NOTE: These pluings are only active when I need them , I disable them to save active memory and processing time. 
 
@@ -54,5 +56,29 @@ STANDARD: WordPress Importer : By wordpressdotorg
 STANDARD: WP Migrate DB : By Delicious Brains 
 
 STANDARD: WP-Sweep :  By Lester 'GaMerZ' Chan 
+
+STANDARD: Contact Form 7 :
+
+STANDARD: Enable Gzip Compression :
+
+STANDARD: Email Domain Verification In CF7 :
+
+STANDARD: CF7 Conditional Fields :
+
+STANDARD: Contact Form 7 Dynamic Text Extension :
+
+STANDARD: Gtmetrix For Wordpress  :
+
+STANDARD: Material Design For Contact Form 7 :
+
+STANDARD: Optimus :
+
+STANDARD: Query Monitor :
+
+STANDARD: Quttera Web Malware Scanner :
+
+STANDARD: Version Info :
+
+STANDARD: HyperDB : This can be downloaded, but moved to needed locations afterwards.I have install instructions in the Markdown. 
 
 

@@ -236,13 +236,13 @@ class Grid  {
                 //else {$r.='<td><A id="'.$number.'" onclick="return click_check(id);" class="btn btn-glass btn-primary"><i class="fa fa-fw fa-lg fa-chevron-right"></i>'.$letter.'</A></td>';}
             foreach($this->_cells as $letter) {
                 if($cpt==0) {$r.='<tr>';}
-                if($letter=='') {$r.='<td><A id="'.$number.'" onclick="return click_check(id);" class="btn btn-glass btn-primary"> '.chr(rand(65,90)).'</A></td>';}
-                else {$r.='<td><A id="'.$number.'" onclick="return click_check(id);" class="btn btn-glass btn-primary">'.$letter.'</A></td>';}
+                if($letter=='') {$r.='<td><A id="'.$number.'" onclick="return click_check(id);" class="butn"> '.chr(rand(65,90)).'</A></td>';}
+                else {$r.='<td><A id="'.$number.'" onclick="return click_check(id);" class="butn">'.$letter.'</A></td>';}
                 $cpt++;
                 if($cpt==$this->_size) {$r.='</tr>'.PHP_EOL; $cpt=0;}
                 $number++; 
                 }
-            $r.='</table><canvas id="wsGameCanvas" style="position: relative;top: -540px;left: 0px;width: 300px;height: 350px;" ></canvas>'.PHP_EOL;
+            $r.='</table><canvas id="wsGameCanvas" style="position: relative;top: 0px;left: 0px;width: 300px;height: 350px;" ></canvas>'.PHP_EOL;
             break;
             
             case Grid::RENDER_TEXT:

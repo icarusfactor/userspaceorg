@@ -6,7 +6,7 @@
 Plugin Name: Words Quest Plugin
 Plugin URI: http://userspace.org
 Description: Words Quest is a basic HTML5/CSS3 Word Search program.
-Version: 0.9.5
+Version: 0.9.38
 Author: Daniel Yount
 Author URI: http://userspace.org
 License: GPLv3 or later
@@ -69,8 +69,8 @@ if ( !class_exists( 'WordsQuestPlugin' ) ) {
 
 		function theme_enqueue() {
 			// enqueue all our scripts
-			wp_enqueue_style( 'wq_pluginstyle', plugins_url( 'assets/wqgc_1.0.1.css', __FILE__ ), null, '1.0.1' );
-			wp_enqueue_script( 'wq_pluginscript_footer', plugins_url( 'assets/clickcheck.js', __FILE__ ),null,'0.9.0', true );
+			wp_enqueue_style( 'wq_pluginstyle', plugins_url( 'assets/wqgc_1.1.3.css', __FILE__ ), null, '1.1.3' );
+			wp_enqueue_script( 'wq_pluginscript_footer', plugins_url( 'assets/clickcheck6.js', __FILE__ ),null,'0.9.0', true );
 		}
 
 		function activate() {
@@ -92,11 +92,11 @@ if ( !class_exists( 'WordsQuestPlugin' ) ) {
 			//$wordbox_start="<DIV STYLE=\"padding: 4px;font-family: monospace;font-weight: 600;font-size: 1.0em;background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));position: fixed;top: 120;left: 350;width: 155px;border: 3px solid #5555FF;\">";
 
 			//$wordbox_start="<DIV style=\"padding: 4px;font-family: monospace;font-weight: 600;font-size: 1.0em;background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));position: relative;top: -340px;left: 5px;width: 190px;border: 3px solid #5555FF;\" >";
-			$wordbox_start="<DIV id=\"wq-wordbox\" style=\"padding: 4px;font-weight: 600;font-size: 1.0em;background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));position: relative;top: -340px;left: 5px;width: 190px;border: 3px solid #5555FF;\" >";
+			$wordbox_start="<DIV id=\"wq-wordbox\" class=\"wqwordsbox\" style=\"padding: 4px;color: #555555 ;font-weight: 400;font-size: 1.24em;background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));position: relative;top: -345px;left: 5px;width: 190px;border: 3px solid #5555FF;\" >";
                         $wordbox_end="</DIV>";
 
-			$gridtop="<DIV ID=\"thegame\" STYLE=\"width: 500px;height: 350px;\">";
-			$gridbottom="</DIV>";
+			$gridtop="<div class=\"bannerpuzzle\" ><DIV ID=\"thegame\" STYLE=\"width: 500px;height: 350px;\">";
+			$gridbottom="</div></div>";
 
                         //start rendering game here.
 			$Content = $gridtop;
@@ -104,7 +104,7 @@ if ( !class_exists( 'WordsQuestPlugin' ) ) {
 			$Content .= $gridbottom;
 			$Content .= $wordbox_start;
 			//$Content .= "Words to find (".$grid->getNbWords().")<BR/>\n";
-			$Content .= "<span style=\"color: #5555E5;\"  >■Words to find■</span><BR/>\n";
+			$Content .= "<span style=\"color: #5555E5;\"  >■Words Quest■</span><BR/>\n";
 			$Content .= $grid->renderWordsList("<BR/>\n");
 			$Content .= $wordbox_end;
 			$Content .= $grid->answerList();

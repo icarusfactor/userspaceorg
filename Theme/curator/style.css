@@ -1,0 +1,684 @@
+/*
+Theme Name: Curator
+Author: Daniel Yount
+Author URI: http://www.userspace.org
+Description: Website for colections
+Version: 0.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: collections
+Text Domain: wpcurator
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+/* Set default font for theme  */
+* {
+ font-family: 'Baloo Bhai', "Times New Roman", Times, serif;	
+
+}
+
+
+.halftonecircles {
+background-color: #709fb7;
+background-image: radial-gradient(circle, rgba(0,212,255,0.1) 75%, rgba(49,145,171,1.0) 100%, rgba(9,108,121,0.1) 55%) , url("http://userspace.org/wp-content/uploads/2019/12/uso_toon_bg.png"); 
+        }
+
+#thegame {
+background-image: radial-gradient(circle, rgba(0,212,255,0.1) 75%, rgba(49,145,171,1.0) 100%, rgba(9,108,121,0.1) 55%) , url("http://userspace.org/wp-content/uploads/2019/12/uso_toon_bg.png"); 
+}	
+
+.solidgradient {
+background: rgb(0,212,255);
+background: radial-gradient(circle, rgba(0,212,255,1) 5%, rgba(49,145,171,1) 57%, rgba(9,108,121,1) 92%);
+}
+
+.crosshatch {
+background-image: radial-gradient(circle, rgba(0,212,255,0.9) 5%, rgba(49,145,171,0.9) 47%, rgba(9,108,121,0.1) 92%) ,url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wwIBBgXWoGzIAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAABESURBVBjTYyg8dK6BAQeAy2FThCGGLIDT1MJD5xrQJZnQ1Diga2JC0j2FgYEhlIGBYXLhoXPp2IwWQeJLwhXhchBMEQCn9ipNngYb7wAAAABJRU5ErkJggg==");	
+ } 
+
+.align-center{
+	align-items: center;
+    display: flex;
+}
+
+/* product css*/
+.product-banner-area{
+	position:relative;
+        height: 754px;
+}
+
+
+/*--------------------------------------------------------------
+Content
+--------------------------------------------------------------*/
+	
+	#content {
+		word-wrap: break-word;
+	}
+	
+	.content-area .hentry {
+		position: relative;
+		/* display: contents; */
+		padding-top: 0px; 
+		/* height: 100%; */
+	}	
+	.content-area .hentry .col-md-6{
+		padding-top: 30px; 
+		padding-bottom: 50px;
+	}
+	.content-area .hentry:nth-last-child(2) .col-md-6{
+		float:right;
+	}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
+	display: block;
+    width: 100%;
+    border: 1px solid rgb(223, 235, 238);
+    padding: 10px 25px;
+    line-height: 20px;
+    color: #758092;
+    border-radius: 3px;
+    background: #fff;
+    font-weight: 300;
+	height:50px;
+}
+textarea{
+	height:auto;
+}
+.widget-section.blog-sidebar .widget{
+	position: relative;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    border: 1px solid #e6f0fa;
+    padding: 25px;
+    /* border-radius: 10px; */
+    -webkit-box-shadow: 0 0 10px #e6f0fa;
+    box-shadow: 0 0 10px #e6f0fa;
+}
+
+/* Banner Carousel Slider  */
+.owl-item{
+	padding:0px;
+}
+
+.owl-pagination {
+bottom:-40px;
+}
+
+.banner-button{
+	margin-top:5px;
+}
+
+
+
+
+/* Social Media Icon Widget. */
+
+.btn-menu {
+height: 40px;
+
+}
+
+.btn-menu ul {
+  float: right;
+  display: block
+  align-self: stretch;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.btn-menu li {
+  position: relative;
+  top: -5px;
+  float: left;
+  display: block;
+  align-items: flex-start;
+  max-height: 60px;
+}
+
+
+#id-5 {
+max-height: 150px;
+overflow: hidden;
+}
+
+
+
+
+/* Custom CSS   */
+
+
+/*Fill in bottom area with footer color */
+body {
+background-color: #709fb7; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+/* Common Link color */
+a {
+/*color:	#497991; */
+color: #EEEEEE;	
+}
+
+a:hover {
+color:	#000055;
+}
+
+/*Home LOGO Button*/
+#usohome {
+position: relative;
+top: 150px;	
+left:   0px;
+width: 280px;
+height: 50px;	
+z-index: 9999;
+}
+
+
+/*hide the pages until I get more than one. */
+.page_item {
+display: none;
+}
+
+.other-header {
+display: none;
+}
+
+
+#masthead {
+padding: 0px;
+height: 190px;
+background-repeat: no-repeat;
+background-image: url("http://userspace.org/wp-content/uploads/2019/10/USO_LOGO3.png");
+background-size: contain;		
+}
+
+
+.marktop{
+position: relative;
+right: 0px;
+top: 0px;
+height: 25px;
+width: 100%;
+background-repeat: repeat-x;
+background-image: url("http://userspace.org/wp-content/uploads/2019/09/USO__marktop-2.png");
+}
+
+.marktopbanner{
+position: absolute;
+right: 0px;
+top: 0px;
+height: 25px;
+width: 100%;
+background-repeat: repeat-x; background-image: url("http://userspace.org/wp-content/uploads/2019/08/USO__marktop-1.png");
+
+}
+
+.markbottom{                        position: absolute; 
+top: 500px;	
+height: 25px;                        width: 100%;	
+background-image: url("http://userspace.org/wp-content/uploads/2019/08/USO_markbottom-1.png");
+
+}
+
+#leftside-attraction {
+position: absolute;
+top: 2.2em;
+left: 0em;	
+	
+width: 10%;	
+height: 25em;	
+
+}
+
+
+#main-attraction {
+position: relative;
+top: 1.5em;
+left: 15.5em;	
+
+width: 55%;	
+height: 25em;	
+
+}
+
+#rightside-attraction {
+right: 1.3em;
+top:   2.2em;
+	
+width: 20%;	
+height: 25em;	
+
+
+}
+
+.bannericonone{
+position: absolute;
+left: 1.5em;
+top: 0em;
+height: 205px;
+width: 165px;
+background-image: url("http://userspace.org/wp-content/uploads/2019/08/bannericon1-1.png");
+}
+
+.bannericontwo{
+position: absolute;
+right: 0.5em;
+top: 2em;
+height: 205px;
+width: 165px;
+z-index: 3;
+background-image: url("http://userspace.org/wp-content/uploads/2019/08/bannericon2-1.png");
+}
+
+.bannericonthree{
+position: absolute;
+right: 0.5em;
+top: 240px;
+height: 205px;
+width: 165px;
+background-image: url("http://userspace.org/wp-content/uploads/2019/08/bannericon3-1.png");
+}
+
+/* Main Content Area*/
+
+div.content-wrapper a {
+color: #7098b7;
+}
+
+
+div.header-background {
+background: url(http://userspace.org/wp-content/uploads/2019/08/USO_background-1024x577-1.png);
+background-repeat: no-repeat;
+background-size: cover;
+height: 500px;
+}
+
+
+/* Ajax media buttons and Container */
+
+#button-container {	
+position: absolute;
+top: 465px;
+display: flex;
+margin-left: auto;
+margin-right: auto;
+	
+	
+}
+
+/* This wipes out the actual space held in the content area for the button holder. */
+#vanish {
+width: 100%;
+height:0px;
+}
+
+
+
+.collections {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #4197ee) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #4197ee 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#4197ee');
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:17px;
+	-moz-border-radius-topleft:17px;
+	border-top-left-radius:17px;
+	-webkit-border-top-right-radius:17px;
+	-moz-border-radius-topright:17px;
+	border-top-right-radius:17px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+text-indent:0px;
+	border:3px solid #469df5;
+	display:inline-block;
+	color:#ffffff;
+	font-family: 'Baloo Bhai', "Times New Roman", Times, serif;	
+	font-size:17px;
+	font-weight:bold;
+	font-style:normal;
+height:40px;
+	line-height:35px;
+width:90px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:2px 2px 6px #287ace;
+}.collections:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4197ee), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #4197ee 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4197ee', endColorstr='#79bbff');
+	background-color:#4197ee;
+}.colections:active {
+	position:relative;
+	top:1px;
+}
+
+/* Cartoon penguins in Virtualspace */
+#content-linux-kernel {
+position: relative;
+right: 10px;
+top: -60px;
+height: 50px;
+width: 50px;
+background-image:  url("http://userspace.org/wp-content/uploads/2019/08/penguin_kernel-1.png");
+        }
+
+#content-new-packages {
+position: relative;
+right: -30px;
+top: -70px;
+height: 60px;
+width: 44px;
+background-image:  url("http://userspace.org/wp-content/uploads/2019/08/cartoon_linux_package-1.png");
+        }
+
+/*  Color the dilaog boxes.  */
+
+#widget-section {
+justify-content: space-around;
+box-shadow: 10px 10px 15px grey;
+color: #444444;
+background-color: #a2d2df;
+	
+        }
+
+#forspace {
+height: 5em;
+width: 100%;	
+}
+
+#rssapp {
+background-color: lightblue;
+	
+}
+#rssbody {
+background-color: lightblue;
+}
+
+#rsshead {	
+background-color: lightblue;
+font-family: 'Baloo Bhai', "Times New Roman", Times, serif;
+	
+}
+
+#rsscontent {
+font-family: 'Baloo Bhai', "Times New Roman", Times, serif;
+	
+}
+
+#APIMGITEM {
+width: 300px;
+}
+
+div.APIMG {
+background-color: #EEEEEE;
+}
+
+div.APSUMMARY {
+background-color: #EEEEEE;
+}
+
+div.APTEXT {
+background-color: #EEEEEE;
+}
+
+div.APVIDEO {
+background-color: lightblue;
+}
+
+#font-wrap {
+font-family: 'Baloo Bhai', "Times New Roman", Times, serif;	
+}
+
+
+/*Bottom of Page Credits*/
+.copyleft {
+	font-family: 'Baloo Bhai', "Times New Roman", Times, serif;
+width: 99%;
+text-align: center;	
+padding:5px 15px 5px 15px;
+background: transparent;
+font-weight: 600;
+line-height: 1.0em;
+margin: 5px;
+}
+
+
+div.textwidget{
+font-family: 'Baloo Bhai', "Times New Roman", Times, serif;	
+}
+
+.widget-title {
+font-family: 'Baloo Bhai', "Times New Roman", Times, serif;
+color: #fff;	
+text-decoration: underline  lightblue;
+text-shadow: 2px 2px 5px #4433AA;
+	
+}
+
+
+.loadmedia {
+   position:absolute;
+	 z-index: 100;
+   width: 15em;
+   height: 5em;
+	 min-width:300px;
+   background: #000000;
+   color: #FFFFFF;
+   margin-left: 25%;
+   margin-right: 25%;
+   border-radius: 25px;
+   text-align: center;
+	 border: 10px solid #252525;
+  line-height: 4em;
+	box-shadow: 8px 15px 10px #555555;
+	text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(155,155,155,0.8);
+}
+
+/* 404 PNF */
+
+.page-title {
+color: #000000;	
+}
+
+
+.butn {
+font-family: monospace;
+}
+
+.btn-bar {
+border-radius: 5px;
+box-shadow: 10px 10px 5px #5555ff;
+}
+
+div.bannerpuzzle {
+position: relative;
+left: 0em;	
+width: 450px;
+height: 350px;
+max-height: 450px;
+max-width: 530px;
+border: 0px solid;
+	
+}
+
+#wq-wordbox {
+font-family: 'Baloo Bhai', "Times New Roman", Times, serif;	
+}
+
+#DTable {
+font-family: "Times New Roman", Times, serif;
+font-size: 11px;
+}
+
+/* Mobile view */
+
+/*Hack to get words section to go away at same time as puzzle. */
+@media all and (max-width: 850px) {
+#wq-wordbox {
+display: none!important;
+}
+
+/* This is to turn off wrapping for tablets so side by side cards still works  */
+.wp-block-columns {
+flex-wrap: nowrap;
+}
+
+.mh_widget {
+display: none !important;
+}
+
+#masthead{
+background-repeat: no-repeat;
+background-size: 96% 100%;
+}	
+
+
+}
+
+
+/* This section shrinks visuals down to size for smartphone and tablets  */
+@media (max-width: 550px) {
+
+#button-container {
+transform: scale(0.75);
+left: -45px;
+}
+
+.mh_widget {
+display: none !important;
+}
+
+.ma_widget {
+display: none !important;
+}
+
+#main-attraction {
+display: none !important;
+}
+
+/* This is to turn back on wrapping for smartphone so cards will show vertical */
+.wp-block-columns {
+flex-wrap: wrap;
+}
+
+
+
+.collecitons {
+font-size: 13px; 
+width: 80px; 
+
+}
+
+#masthead{
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-image:	url("http://userspace.org/wp-content/uploads/2019/10/USO_LOGO_MOBILE.png");
+}	
+
+/* This is for mobile header image to respond correctly.*/ 
+html {
+    height: 100%;
+    width: 100%;
+}	
+	
+	
+} /* end of mobile view */
+
+/* Hack to get Chrome carousel to stay put at 150px no matter what the length of the slider. */
+/* Will have to change this to current id number */
+
+
+
+#slider_2881 {
+max-height: 480px;	
+}
+
+.footbreak {
+position: relative;
+top: -25px;
+background-repeat: repeat-x;
+height: 25px;
+background-image:	url("http://userspace.org/wp-content/uploads/2019/08/USO_markbottom-1.png");
+}
+
+
+/*  Cool GPL top banner  */
+.line{
+  position:absolute;
+  height:100%; width:1px;
+  opacity:0.9;
+  background-color: cadetblue;
+}
+
+.titleCont{
+ position:relative;
+ top: -15px; 
+ display: flex;
+ align-items: right;
+ justify-content: right;
+ flex-flow: column;
+ text-align: right;
+
+}
+
+.banner-title {
+    padding: 1em 1em 1em;    
+    font-weight: 600;
+    font-size: 13px;
+    color: white;
+    position:realative;
+    line-height:1.1;
+    white-spacing:1;
+    opacity:0.9;
+    text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+.ovverTitle{
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+.dot{
+  width:3px;
+  height:2px;
+  background-color: cadetblue;
+  position:absolute;
+  opacity:0.1;
+}
+
+
+/* Distro Slider Carosuel. */
+#id-5 {
+height: 150px;
+max-height:150px;
+overflow: hidden;
+}
+
+/* Main Banner MA WIDGET Center Section */
+#main-attraction {
+padding: 40px;
+
+}
+
+
+/* This is to init the other Slide Anything Sliders and has nothing in it and needs not be shown  */
+#slider_1712 {
+visibility:hidden;
+display: none;
+}
+

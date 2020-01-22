@@ -1,0 +1,72 @@
+This is the data entered into the Appearance->widgets for the curator theme. 
+
+Masthead Text:
+text:
+<section class="titleCont">
+<h1 class="banner-title">GPL(GENERAL PUBLIC LICENSE) FREEDOM 0:
+<span style="padding-left: 100px;">The freedom to run the program as you wish, for any purpose.</span>
+FREEDOM 1:
+<span style="padding-left: 100px;">The freedom to study how the program works, and change it so it does your computing as you wish.</span>
+FREEDOM 2:
+<span style="padding-left: 100px;">The freedom to redistribute copies so you can help others.</span>
+FREEDOM 3:
+<span style="padding-left: 100px;">The freedom to distribute copies of your modified versions to others.</span></h1>
+</section>
+ 
+Banner Carousel:
+text:
+[carousel_slide id='5']
+
+Main Attraction:
+text:
+[wordsquest]
+
+Leftside Attraction:
+text:
+<div class="bannericonone"></div>
+
+Rightside Attraction:
+text:
+<div class="bannericontwo"></div>
+<div class="bannericonthree"></div>
+
+Footer Citation:
+text:
+<span id="webauthor"> Page Design by [<a href="#GenEmailModal" data-toggle="modal" data-target="#GenEmailModal">Daniel Yount</a>]</span>:::<span id="footerhosting"> Thanks To [<a href="https://x10hosting.com">X10Hosting</a>] For Free Hosting </span>:::<span id="webapplication"> Powered By [<a href="https://www.wordpress.org">Wordpress</a>]</span>
+
+Footer Mega Grid Columns:
+Custom HTML:
+title: Legal
+<span id="privacyfooter">[<a target="_blank" href="http://47.217.123.141:8080/userspace-privacy-policy/">Privacy Statement</a>]</span>
+<br>
+<span id="tosfooter">[<a target= "_blank" href="http://47.217.123.141:8080/terms-of-service/">Terms Of Service</a>]</span>
+<br>
+[<a target="_blank" href="http://47.217.123.141:8080/licenses/"> Licenses</a>]
+<br>
+[<a target="_blank" href="http://47.217.123.141:8080/citation/"> Citation</a>]
+<br>
+[<a target="_blank" href="https://www.gnu.org/copyleft"> What Is Copyleft </a>]
+<br>
+
+Custom HTML:
+title: Impact
+[<a target="_blank" href="https://www.fsf.org/awards/sb-award">Social Benefit Award </a>]
+<br>
+[<a target="_blank" href="https://www.fsf.org/awards/fs-award">Advancement of Free Software Award</a>]
+<br>
+[<a target="_blank" href="https://opensource.com/resources/organizations">Open Source Organizations</a>]
+<br>
+[<a target="_blank" href="http://www.userspace.org/mission">Userspace Mission</a>]
+<br>
+
+Custom HTML:
+title: Resources
+[<a target="_blank" href="https://events.linuxfoundation.org/">Linux Founation Event List</a>]
+<br>
+[<a target="_blank" href=" https://www.edx.org">EdX - Free Online Courses</a>]
+<br>
+[<a target="_blank" href="http://freecomputerbooks.com">Free Computer EBooks</a>]
+<br>
+[<a target="_blank" href="https://pastebin.com">Pastebin</a>]
+<br>
+

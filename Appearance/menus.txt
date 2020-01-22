@@ -1,0 +1,66 @@
+This is the data entered into Appearance->menus for the curator theme. 
+
+Menu: collection(collection)
+Custom Link:
+ url: http://webvm.dev:8080/ram
+ label: RAM
+ size: Menu-36x36
+ postion: after
+Custom Link:
+ url: http://webvm.dev:8080/newsfeeds
+ label: NEWSFEEDS 
+ size: Menu-36x36
+ postion: after
+Custom Link:
+ url: http://webvm.dev:8080/videocast 
+ label: VIDEO 
+ size: Menu-36x36
+ postion: after
+Custom Link:
+ url: http://webvm.dev:8080/podcast 
+ label: AUDIO 
+ size: Menu-36x36
+ postion: after
+Custom Link:
+ url: http://webvm.dev:8080/infosec 
+ label: INFOSEC
+ size: Menu-36x36
+ postion: after
+
+
+Menu: social(social)
+Custom Link:
+ url: https://www.facebook.com/userspaceorg
+ label: FACEBOOK
+ image: http://webvm.dev:8080/wp-content/uploads/2019/12/userspace-facebook_v2.png 
+ size: Menu-36x36
+ postion: hide
+
+Custom Link:
+ url: https://twitter.com/userspaceorg
+ label: TWITTER
+ image: http://webvm.dev:8080/wp-content/uploads/2019/12/userspace-twitter_v2.png 
+ size: Menu-36x36
+ postion: hide
+
+Custom Link:
+ url: https://freeradical.zone/web/accounts/146295
+ label: MASTODON
+ image: http://webvm.dev:8080/wp-content/uploads/2019/12/uso_mastadon_v2.png 
+ size: Menu-36x36
+ postion: hide
+
+Custom Link:
+ url: https://vk.com/public186530728
+ label: VKONTAKTE
+ image: http://webvm.dev:8080/wp-content/uploads/2019/12/userspace-vk_v2.png
+ size: Menu-36x36
+ postion: hide
+
+Custom Link:
+ url: https://github.com/icarusfactor/userspaceorg
+ label: GITHUB
+ image: http://webvm.dev:8080/wp-content/uploads/2019/12/userspace-github_v2.png
+ size: Menu-36x36
+ postion: hide
+

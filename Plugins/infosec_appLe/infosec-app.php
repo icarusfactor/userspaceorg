@@ -6,7 +6,7 @@
 Plugin Name: Infosec Vulnerability RSS Feed App 
 Plugin URI: http://userspace.org
 Description: This app gathers RSS feed data for software vulnerabilities and requires the AppLepie project plugin.  
-Version: 0.8.15
+Version: 0.8.16
 Author: Daniel Yount IcarusFactor
 Author URI: http://userspace.org
 License: GPLv2 or later
@@ -113,6 +113,8 @@ if ( !class_exists( 'infosecAppLe' ) && class_exists( 'AppLePiePlugin' )  ) {
                         foreach($titlerss as $item): 
 
                         $i++;if ($i >= 7 ) {break;}
+                        //Filter out IMG tags.                        
+                        $contentrss[$i] = preg_replace("/<img[^>]+\>/i", " ", $contentrss[$i]); 
 
                         $Content .= "<!-- Filter Starts Here -->";
 

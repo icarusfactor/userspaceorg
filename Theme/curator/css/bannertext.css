@@ -1,0 +1,30 @@
+.bannerbox {
+  height: 100%;
+  width: 100%;
+  justify-content: left;
+  align-items: left;
+  display: block;
+  color: #FFFFFF;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.text {
+  font-weight: 100;
+  font-size: 30px;
+}
+.dud {
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
