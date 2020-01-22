@@ -135,6 +135,7 @@ sync-master-info = 1
 
 
 ###### LOGON: dbvmA.dev again in another console
+
   `mysql -uroot --vertical -e "show master status;"`
 
    ```
@@ -165,6 +166,7 @@ sync-master-info = 1
    `mysql -uroot -p wordpress < /tmp/dbvmA.sql`
 
 1. Get Replication position on secondary database.
+
   `mysql -uroot --vertical -e "show master status;"`
 
  ```
