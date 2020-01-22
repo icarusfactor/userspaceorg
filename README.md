@@ -130,7 +130,8 @@ sync-master-info = 1
   ###### LOGON: dbvmA.dev
 
 ` mysql> use wordpress; `
-mysql> FLUSH TABLES WITH READ LOCK;
+
+`mysql> FLUSH TABLES WITH READ LOCK;`
 
 
 ###### LOGON: dbvmA.dev again in another console
