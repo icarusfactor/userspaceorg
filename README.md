@@ -7,8 +7,8 @@
 **CREATE DUPLICATE TEST SYSTEM**
 - - -
 
-== Setup VM for each of the systems==
-== NOTE: Future setup I'm moving to virt-manager/virt-install for PXE boot from TFTP server==
+==Setup VM for each of the systems==
+==NOTE: Future setup I'm moving to virt-manager/virt-install for PXE boot from TFTP server==
 
 1. Virtualbox VM for wordpress web server.
   - NAME webvm.dev 
