@@ -1,37 +1,33 @@
 ![Userspace.org](/Media/USO_LOGO3.png)
 # USERSPACEORG
-
-- - -
 ##### FOSS code for community website setup of server and development system.
 **Process For Setup**
 **CREATE DUPLICATE TEST SYSTEM**
 - - -
-
-==Setup VM for each of the systems==
-==NOTE: Future setup I'm moving to virt-manager/virt-install for PXE boot from TFTP server==
-
-1. Virtualbox VM for wordpress web server.
-  - NAME webvm.dev 
+##### Setup VM for each of the systems 
+##### NOTE: Future setup I'm moving to virt-manager/virt-install for PXE boot from TFTP server
+**Virtualbox VM for wordpress web server.**
+   - NAME webvm.dev 
   - CPU 1 
   - Memory 2G min
   - Disk 20G min
   - Network Bridge
 
-1. Virtualbox VM for MariaDB server.
+**Virtualbox VM for MariaDB server.**
   - NAME dbvmA.dev
   - CPU 1 
   - Memory 2G min
   - Disk 15G min
   - Network Bridge
 
-1. Virtualbox VM for MariaDB server.
+**Virtualbox VM for MariaDB server.**
   - NAME dbvmB.dev
   - CPU 1 
   - Memory 2G min
   - Disk 15G min
   - Network Bridge
 
-==Setup DNS on each VM==
+##### Setup DNS on each VM
 ###### LOGON: webvm.dev 
 `vim /etc/hosts.net`
 ```
@@ -102,7 +98,7 @@ sync-master-info = 1
 `sudo service mysqld restart`
 
 1. Setup named wordpress admin user of database.
-   ==NOTE: admin needs full access to the wordpress database==
+   ##### NOTE: admin needs full access to the wordpress database
    ###### LOGON: dbvmA.dev 
      - CREATE USER 'webuser'@'webvm.dev' identified by '123456';
      - GRANT ALL ON *.* TO 'webuser'@'%.webvm.dev';
@@ -112,7 +108,7 @@ sync-master-info = 1
      - GRANT ALL ON *.* TO 'webuser'@'%.webvm.dev';  
      
 1. Setup wordpress replication user for master-master database.
-   ==NOTE: replication only needs access to each other wordpress database==
+   ##### NOTE: replication only needs access to each other wordpress database
    ###### LOGON: dbvmA.dev 
      - CREATE USER 'repl_user'@'dbvmB' identified by '123456';
      - GRANT REPLICATION SLAVE ON wordpress.* TO 'repl_user'@'%.dbvmB.dev';
@@ -208,13 +204,13 @@ Slave_SQL_Running: Yes
    ```
    
 1. If you have Connecting or No on either database you will have to resync.
-  ==NOTE: ADD HOW TO RESYNC IN FUTURE ==
+  ##### NOTE: ADD HOW TO RESYNC IN FUTURE 
     - But entails mostly going back over of item *11* , *12* , *13*
 
 1. Install Wordpress 5.x php7.x and support libraries.
    ###### LOGON: webvm.dev
    
-   ==URL: for download: https://wordpress.org/download/releases/==
+   ##### URL: for download: https://wordpress.org/download/releases/
     - cd /var/www/html/
     - wget https://wordpress.org/wordpress-5.3.2.tar.gz
     - tar zxvf wordpress-5.3.2.tar.gz
@@ -239,7 +235,7 @@ Slave_SQL_Running: Yes
 
 1. RESTORE to local development system.
   ###### LOGON: dbvmA.dev
-  ==NOTE: You should have already installed/setup DB for master-master replaication.==
+  ##### NOTE: You should have already installed/setup DB for master-master replication.
     * Migrate only wordpress sql into systems DB.
      `mysql  wordpress < wordpress-migrate-20191008215324.sql` 
     * (OPTIONAL)Change wordpress login password to current system.
@@ -261,12 +257,12 @@ Slave_SQL_Running: Yes
      - “UPDATE (name-of-table-you-found) SET user_pass=”(MD5-string-you-made)” WHERE ID = (id#-of-account-you-are-reseting-password-for);” (actually changes the password)
      - “SELECT ID, user_login, user_pass FROM (name-of-table-you-found);” (confirm that it was changed)
      - "exit" mysql
-1. Change permissions on files and directoies in alignment with httpd process.
+1. Change permissions on files and directories in alignment with httpd process.
    ###### LOGON: webvm.dev ######
 
     - Install files you had downloaded from remote FTP server
 
-    ==NOTE: This will let you update plugins to wordpress.==
+    ##### NOTE: This will let you update plugins to wordpress.
     ```
     cd /var/www/html/wordpress/
     sudo find . -exec chown www-data:www-data {} +
@@ -274,7 +270,7 @@ Slave_SQL_Running: Yes
     sudo find . -type d -exec chmod 775 {} +
     sudo chmod 660 wp-config.php
     ```
-    ==NOTE: So that you don't have to setup an FTP server.==
+    ##### NOTE: So that you don't have to setup an FTP server.
 
     ` echo "define('FS_METHOD','direct');" >> wp-config.php`
     ###### LOGON: webvm.dev wordpress
@@ -303,7 +299,7 @@ Slave_SQL_Running: Yes
     - Check the apache2 config or in sites enabled for "AllowOverride None" Change None to All.
 
 1. Setup CRON to PING site and set off WPCRON functions for updating my site cache
-   == NOTE: May use free account on https://uptimerobot.com in future.==
+   ##### NOTE: May use free account on https://uptimerobot.com in future.
    ###### LOGON: local system
   ```
  mkdir /usr/local/cron/
@@ -314,7 +310,7 @@ crontab -e
 ```
 
 1. Add Hyperdb to Wordpress for load balance,fail-over,replication and cache.
-   ==NOTE: This maybe already instaled in your FTP download , but want to show manual add.==
+   ##### NOTE: This may be already installed in your FTP download , but want to show manual add.
    ###### LOGON: webvm.dev
     * Download zip "wget https://downloads.wordpress.org/plugin/hyperdb.zip"
     * Unzip "unzip hyperdb.zip"
@@ -327,7 +323,7 @@ crontab -e
    ###### LOGON: URL: http://webvm.dev/wp-admin/ ######
    - Install REDIS Wordpress plugin and activate.
    ###### LOGON: dbvmA.dev
-   ==NOTE: Will only setup one of these and not distrubuted, but could be.==
+   ##### NOTE: Will only setup one of these and not distributed, but could be.
    ` apt-get install php-redis redis-server`
     `vim /etc/redis/redis.conf`
       - Add bind address
@@ -348,4 +344,3 @@ $redis_server = array(
    `redis <host address>`
    `  auth 12345  `
    `  keys * `
- 
