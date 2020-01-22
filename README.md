@@ -147,7 +147,8 @@ sync-master-info = 1
 ```
    
 1. Dump mysql database to raw sql file.
-  `mysqldump -uroot -p wordpress > dbvmA.sql`
+
+`mysqldump -uroot -p wordpress > dbvmA.sql`
 
 1. Switch back to console with open mysql client connection and release the DB.
 ```
@@ -206,7 +207,7 @@ Slave_SQL_Running: Yes
    
 1. If you have Connecting or No on either database you will have to resync.
   ##### NOTE: ADD HOW TO RESYNC IN FUTURE 
-    - But entails mostly going back over of item 11 , 12 , 13
+    - But entails mostly going back over getting replication position and repeat. 
 
 1. Install Wordpress 5.x php7.x and support libraries.
    ###### LOGON: webvm.dev
