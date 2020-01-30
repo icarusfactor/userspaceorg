@@ -64,3 +64,21 @@ Custom Link:
  size: Menu-36x36
  postion: hide
 
+
+Menu: work(work)
+Custom Link:
+ url: http://userspace.org/distro 
+ label: DISTRO 
+ position: after
+
+Custom Link:
+ url: http://userspace.org/desktop
+ label: DESKTOP
+ position: after
+
+Custom Link:
+ url: http://userspace.org/foss 
+ label: FOSS
+ position: after
+
+ 

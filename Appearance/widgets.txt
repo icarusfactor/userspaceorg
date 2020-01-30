@@ -13,10 +13,6 @@ FREEDOM 3:
 <span style="padding-left: 100px;">The freedom to distribute copies of your modified versions to others.</span></h1>
 </section>
  
-Banner Carousel:
-text:
-[carousel_slide id='5']
-
 Main Attraction:
 text:
 [wordsquest]
