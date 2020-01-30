@@ -1,7 +1,7 @@
 # Mysqld Multi setup.
 
- #####This is an excellent setup for test or development systems.
- #####On a production system it better splits processes and threads to read and write.
+ ##### This is an excellent setup for test or development systems.
+ ##### On a production system it better splits processes and threads to read and write.
 
 ```apt-get Get mysql server```
 
