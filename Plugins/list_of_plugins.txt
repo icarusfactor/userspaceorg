@@ -9,7 +9,10 @@ CUSTOM: Applepie Feed Manager : Updates RSS feeds in groups. Has bug against oth
 CUSTOM: AppLePie Plugin : Parent plugin for custom RSS feeds : By Daniel Yount 
 
 STNADARD: Carousel Slider :  By Sayful Islam
-NOTE: Used for the home page distroslider
+NOTE: Used for the home page distroslider.
+      I also had to modify the lazyload image to hide it.
+      It caused problems with SVG's.
+
 
 STANDARD: Footer Mega Grid Columns :  By WP OnlineSupport 
 
@@ -73,12 +76,9 @@ STANDARD: Material Design For Contact Form 7 :
 
 STANDARD: Optimus :
 
-STANDARD: Query Monitor :
-
 STANDARD: Quttera Web Malware Scanner :
 
 STANDARD: Version Info :
 
 STANDARD: HyperDB : This can be downloaded, but moved to needed locations afterwards.I have install instructions in the Markdown. 
-
 

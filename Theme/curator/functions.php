@@ -44,6 +44,18 @@ function cc_mime_types($mimes) {
 add_filter('upload_mimes', 'cc_mime_types');
 
 
+// Add custom css CLASS and jquery launcher in ID for work menu
+function add_work_menu_atts( $atts, $item, $args ) {
+    // check if the item is in the work menu
+    if( $args->theme_location == 'work' ) {
+      // add the desired attributes:
+      $atts['class'] = 'works';
+      $atts['id'] = $item->title; 
+    }
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'add_work_menu_atts', 10, 3 );
+
 
 // Add custom css CLASS and jquery launcher in ID for collection menu
 function add_collection_menu_atts( $atts, $item, $args ) {
@@ -60,6 +72,7 @@ add_filter( 'nav_menu_link_attributes', 'add_collection_menu_atts', 10, 3 );
 
 function register_menu() {
 register_nav_menu('social',__( 'social' ));
+register_nav_menu('work',__( 'work' ));
 register_nav_menu('collection',__( 'collection' ));
 }
 add_action( 'init', 'register_menu' );
@@ -203,14 +216,6 @@ if ( function_exists('register_sidebar') )
   )
 );
 
-// Register and setup Widget. 
-if ( function_exists('register_sidebar') )
-  register_sidebar(array(
-    'name' => 'Banner Carousel',
-    'before_widget' => '<div class = "bc_widget">',
-    'after_widget' => '</div>'
-  )
-);
 
 // Register and setup Widget. 
 if ( function_exists('register_sidebar') )

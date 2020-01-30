@@ -40,9 +40,34 @@
 </div>
 
 
-	<div id="slider_cover" ><div class="marktop" ></div>
-	 <!-- Carousel short code goes here.  -->
-         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Banner Carousel") ) : ?><?php endif;?>
+	<div id="slider_cover" >
+        <div style="height: 25px;width: 100%;">
+        <div id="vanish"><div class="marktop" ></div>
+
+<nav id="button-container-work">
+
+<?php
+    //Work Dynamic Menu List
+    $menuParameters = array(
+      'theme_location' => 'work',
+      'container'       => false,
+      'echo'            => false,
+      'depth'           => 0,
+    );  
+    // Convert menu string into only anchor tags.
+    echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+?>
+
+</nav>
+</div>
+</div>
+
+<script src="http://userspace.org/wp-content/themes/curator/js/init_works.js"></script>
+ <!-- Carousel short code goes here.  -->
+     <div id="works">
+     <?php  echo str_repeat('&nbsp;</BR>', 6); //empty fill area  ?>
+     </div>
+ <!-- Carousel short code goes here.  -->
 
 	<div class="product-banner-area"> 
 

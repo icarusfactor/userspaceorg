@@ -285,6 +285,8 @@ Slave_SQL_Running: Yes
 
 1.  Install/Activate Plugins,Fix Media Library.
 
+	 - Use the Carousel Slider Plugin I use in this repo as I changed the lazyload image.
+	 - I also use the podcast player from this repo, upgrading it seems to break it.
      - Just check Regenerate Thumbnails and start processing.
 
 1. Random Mix

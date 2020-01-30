@@ -1,24 +1,30 @@
 # Mysqld Multi setup.
 
- * This is an excellent setup for test or development systems. On production side it better splits processes and threads to read and write. 
+ #####This is an excellent setup for test or development systems.
+ #####On a production system it better splits processes and threads to read and write.
 
-[1]  apt-get Get mysql server
-[2]  edit mysqld_multi as it needs to be patched.
+```apt-get Get mysql server```
 
-comment out this section:
+**edit mysqld_multi as it needs to be patched.(usually found in /usr/bin/)**
+**comment out this section:**
+```
     #    if (!$suffix_found)
     #{
     #  $com.= " --defaults-group-suffix=";
     #  $com.= $groups[$i];
     #}
+```
+**Change elseif to below. elsif**
+```
+elsif ("--defaults-group-suffix=" eq substr($options[$j], 0, 24))
+```
 
-    #Change elseif to below. elsif
-    elsif ("--defaults-group-suffix=" eq substr($options[$j], 0, 24))
 
-      
-[3] cd  /etc/mysql/mariadb.conf.d
+**Edit config to make multiple DB entries for logs and data **
+```cd  /etc/mysql/mariadb.conf.d```
 
-Edit file to match : 50-client.cnf
+**Edit file to match : 50-client.cnf**
+```
 [client]
 # Default is Latin1, if you need UTF-8 set this (also in server section)
 default-character-set = utf8mb4
@@ -28,10 +34,10 @@ port=3306
 #socket = /var/run/mysqld/mysqld.sock
 socket = /var/run/mysqld/mysql_master.sock
 protocol=TCP
+```
 
-
-Edit file to match : 
-
+**Edit file to match : 50-server.cnf**
+```
 #
 # These groups are read by MariaDB server.
 # Use it for options that only the server (but not clients) should see
@@ -100,58 +106,76 @@ Edit file to match :
            log_bin             = /var/log/mysql/mysql-bin-slave.log
            binlog-do-db = mysql
            binlog-do-db = wordpress
+```
 
- 
-[4] Make needed master / slave directories
-     You should have log directory already , both master and slave will use this .
+**Make needed master / slave directories**
+
+**You should have log directory already , both master and slave will use this .**
+```
     /var/log/mysql/
-    You shoudl alsready have a pid and socket directory.
-    /var/run/ 
-   You will need to create a master database binary directory
+```
+**You should already have a pid and socket directory.**
+```
+    /var/run/
+```
+**You will need to create a master database binary directory**
+```
    /var/lib/mysql_master/
-   You will need to create a slave database binary directory
+```
+**You will need to create a slave database binary directory**
+```
    /var/lib/mysql_slave/
-   
-[5]  Build master and slave databases
+```
+
+**Build master and slave databases**
+```
     mysql_install_db --user=mysql --datadir=/var/lib/mysql_master
     mysql_install_db --user=mysql --datadir=/var/lib/mysql_slave
-   
-[6] service mysqld start
-[7] mysqld_multi start 1,2
-[8] mysqld_multi report
+```
+**mysql_multi command controls**
+```service mysqld start```
+```mysqld_multi start 1,2```
+```mysqld_multi report```
 
-[9] Create multi_admin and slave user
+**Create multi_admin and slave user**
+```
 CREATE USER 'multi_admin'@'localhost' identified by '123456';
 GRANT ALL ON *.* TO 'multi_admin'@'localhost';
 CREATE USER 'slave'@'localhost' identified by '123456';
 GRANT ALL ON *.* TO 'slave'@'localhost';
 FLUSH PRIVILEGES;
+```
 
+**Once both databases are up you should be able to acces them via 0.0.0.0 or socket and set port 3306 and 3308**
+```mysql --host=0.0.0.0 -S /var/run/mysqld/mysql_master.sock  --port=3306```
+```mysql --host=0.0.0.0 -S /var/run/mysqld/mysql_slave.sock --port=3308```
 
-[10] Once both databases are up you should be able to acces them via 0.0.0.0 or socket and set port 3306 and 3308
-mysql --host=0.0.0.0 -S /var/run/mysqld/mysql_master.sock  --port=3306
-mysql --host=0.0.0.0 -S /var/run/mysqld/mysql_slave.sock --port=3308 
-
-[11]  On Master LOCK DB and save position and bin file name.
+**On Master LOCK DB and save position and bin file name.**
+```
    FLUSH TABLES WITH READ LOCK;
    SHOW MASTER STATUS;
-   
-[11]  From Master
-mysqldump -uroot -p --host=0.0.0.0 --port=3306 --create-options --triggers --routines --events --all-databases --master-data=2 > replicationdump.sql
+```
 
-[12] On Master Unlock DB. 
-   UNLOCK TABLES;
-   
-[13] On Slave import database from master.   
- mysql --port=3308  -S /var/run/mysqld/mysql_slave.sock  < database.sql
- 
- 
- [14]  On Slave start slave REPLICATION. 
+**From Master**
+```mysqldump -uroot -p --host=0.0.0.0 --port=3306 --create-options --triggers --routines --events --all-databases --master-data=2 > replicationdump.sql```
+
+**On Master Unlock DB.**
+```
+UNLOCK TABLES;
+```
+
+**On Slave import database from master.**
+``` mysql --port=3308  -S /var/run/mysqld/mysql_slave.sock  < database.sql```
+
+**On Slave start slave REPLICATION.**
+```
    STOP SLAVE;
    SHOW SLAVE STATUS; 
    CHANGE MASTER TO MASTER_HOST='localhost', MASTER_USER='slave', MASTER_PASSWORD='123456', MASTER_LOG_FILE='mysql-bin-master.000013', MASTER_LOG_POS=798;
    START START;
    SHOW SLAVE STATUS;
+```
+
 
 
 
