@@ -1,8 +1,8 @@
 ---
-#Inkscape Cookie Cutter Extension
+# Inkscape Cookie Cutter Extension
 ---
 I decided to make a single SVG to create all my icons from.
-This is the **base.svg** file. Which all 3 files need to be
+This is the ** base.svg ** file. Which all 3 files need to be
 moved to your** ~/.config/inkscape/extensions/ ** directory.
 ```
 uso_cookie_cutter_procedural.inx
@@ -16,7 +16,7 @@ File->New From Template->Userspace Cookie Cutter.
 Then select the icon of your choice.
 
 I edit the text to match name of program I want to link to 
-with the **slider carousel**. I may need to resize depending
+with the ** slider carousel **. I may need to resize depending
 on the program name.
 
 You can recenter text:
