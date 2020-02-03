@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+    <_name>Userspace.org Icon Cookie Cutter</_name>
+    <id>org.inkscape.render.uso_cookie_cutter</id>
+    <dependency type="executable" location="extensions">uso_cookie_cutter.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+       
+    <param name="cat" type="enum" gui-text="Category">
+    <item value="1">OFFICE</item>
+    <item value="2">GAMES</item>
+    <item value="3">SYSTEM</item>
+    <item value="4">UTILITIES</item>
+    <item value="5">MULTIMEDIA</item>
+    <item value="6">GRAPHICS</item>
+    <item value="7">DEVELOPMENT</item>
+    <item value="8">EDUCATION</item>
+    <item value="9">INTERNET</item>
+    <item value="10">SCIENCE</item>
+    <item value="11">SERVER</item>
+    <item value="12">WINDOW MANAGER</item>
+    <item value="13">DESKTOP ENVIRONMENT</item>
+   </param>
+    
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu hidden="true" />
+    </effect>
+    <inkscape:_templateinfo>
+      <inkscape:_name>Userspace Cookie Cutter</inkscape:_name>
+      <inkscape:author>icarusfactor</inkscape:author>
+      <inkscape:_shortdesc>Create SVG icon for Userspace.org.</inkscape:_shortdesc>
+      <inkscape:date>2020-2-1</inkscape:date>
+      <inkscape:_keywords>icon category</inkscape:_keywords>
+    </inkscape:_templateinfo>
+    <script>
+        <command reldir="extensions" interpreter="python">uso_cookie_cutter.py</command>
+    </script>
+</inkscape-extension>
