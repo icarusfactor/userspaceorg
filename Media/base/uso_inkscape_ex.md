@@ -1,5 +1,5 @@
 ---
-# Inkscape Cookie Cutter Extension
+# Inkscape 0.93 Cookie Cutter Extension
 ---
 I decided to make a single SVG to create all my icons from.
 This is the **base.svg** file. Which all 3 files need to be
