@@ -29,7 +29,7 @@
 
 ##### Setup DNS on each VM
 ###### LOGON: webvm.dev 
-`vim /etc/hosts.net`
+`vim /etc/hosts`
 ```
 localhost 127.0.0.1
 webvm.dev 192.168.1.10
