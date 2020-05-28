@@ -1,7 +1,7 @@
 #! /usr/bin/python2
 
 # Written by icarusfactor
-# V.0.5
+# V.00
 
 import simplestyle
 import inkex, sys, re, os
@@ -68,6 +68,10 @@ class C(inkex.Effect):
        if layer: svg.remove(layer[0]) # remove if it existis        
     if self.options.category != 13:   
        layer = self.document.xpath( '//*[@inkscape:label="icon_de"]', namespaces=inkex.NSS)
+       if layer: svg.remove(layer[0]) # remove if it existis        
+    if self.options.category != 14:   
+       layer = self.document.xpath( '//*[@inkscape:label="icon_ds"]', namespaces=inkex.NSS)
+
        if layer: svg.remove(layer[0]) # remove if it existis     
        
  

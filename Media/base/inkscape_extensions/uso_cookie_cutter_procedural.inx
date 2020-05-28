@@ -19,6 +19,7 @@
     <item value="11">SERVER</item>
     <item value="12">WINDOW MANAGER</item>
     <item value="13">DESKTOP ENVIRONMENT</item>
+    <item value="14">DISPLAY SERVER</item>
    </param>
     
     <effect needs-live-preview="false">

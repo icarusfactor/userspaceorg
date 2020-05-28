@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="40"
+   height="30"
+   viewBox="0 0 10.583333 7.9375002"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="USOmultimedia_icon.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.4702407"
+     inkscape:cx="22.412747"
+     inkscape:cy="26.713459"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1150"
+     inkscape:window-height="737"
+     inkscape:window-x="2000"
+     inkscape:window-y="77"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-289.06249)">
+    <path
+       style="fill:#000000;stroke-width:0.0824838"
+       d="m 5.6144138,296.50388 c -0.9964091,-0.43086 -0.1355667,-1.66376 0.7362974,-1.64492 1.3075462,0.10878 0.8348438,-1.35372 0.9439468,-2.09116 0.020955,-0.82254 -0.00513,-1.65149 0.1027755,-2.46855 0.833277,0.1005 1.629091,0.66682 1.9971992,1.36416 0.3828166,0.86645 0.4197794,2.08147 -0.4678784,2.70354 0.123786,-0.63655 -0.2057895,-2.03759 -1.0775529,-1.95644 -0.2036813,1.18956 0.047231,2.43074 -0.2983995,3.59725 -0.4010593,0.53864 -1.2872049,0.69674 -1.9363881,0.49612 z M 3.118098,295.52899 c -2.13632961,-0.53093 -3.15588922,-3.07048 -1.9666316,-4.74415 1.0420151,-1.63692 3.7762823,-2.08396 5.3192163,-0.78055 1.0790037,0.7333 -0.2064598,1.44435 -0.9143284,1.81367 -0.13218,0.72628 1.7242556,-0.63797 1.3193818,0.5765 -0.2008557,0.62845 0.4929502,2.0358 -0.4949374,2.11493 -1.0314044,-0.0238 -1.2933196,1.23541 -2.2465773,1.15843 -0.3424476,-0.008 -0.6882265,-0.0463 -1.0161234,-0.13883 z m -0.2682777,-1.59225 c 0.7879466,-0.49717 0.027815,-1.23661 -0.6443215,-0.73311 -1.38494496,0.0149 0.00235,1.88666 0.5565655,0.82861 z m 1.9225508,-0.97043 c 1.0002846,-0.74672 -0.8737165,-1.95244 -1.3409433,-0.83716 -0.4463467,0.735 0.7498007,1.52007 1.3409433,0.83716 z m -1.3008912,-1.54447 c 0.789676,-0.28029 0.060718,-2.19429 -0.8136309,-1.27647 -0.7354284,0.24985 -0.9498938,0.93442 -0.092747,1.1968 0.3368726,0.24345 0.5385834,0.44715 0.9063779,0.0796 z"
+       id="path53394"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

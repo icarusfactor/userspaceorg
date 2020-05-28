@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="150"
+   height="150"
+   viewBox="0 0 39.6875 39.6875"
+   version="1.1"
+   id="svg922"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="USO_office_moneymanagerex.svg">
+  <title
+     id="title1437">USOICON</title>
+  <defs
+     id="defs916">
+    <clipPath
+       id="clipPath1521"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="66.644836"
+         x="57.114269"
+         height="151.42299"
+         width="172.87534"
+         id="rect1523"
+         style="opacity:0.875;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.60403091;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.2193241"
+     inkscape:cx="68.585213"
+     inkscape:cy="74.503721"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer3"
+     showgrid="false"
+     inkscape:window-width="1106"
+     inkscape:window-height="664"
+     inkscape:window-x="2495"
+     inkscape:window-y="103"
+     inkscape:window-maximized="0"
+     units="px" />
+  <metadata
+     id="metadata919">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>USOICON</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     style="display:inline"
+     transform="translate(-35.46637,-112.59198)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="toonbox">
+    <path
+       sodipodi:nodetypes="cccsc"
+       inkscape:connector-curvature="0"
+       id="rect49496"
+       d="m 36.90156,122.71989 c 0.831696,-1.81518 32.136082,-1.74537 36.596996,0 1.360957,1.25668 1.965827,18.83145 -0.529263,19.1107 -2.34387,2.23409 -34.78045,1.7797 -36.294559,0.62834 -1.133237,-0.86173 -1.587784,-18.83144 0.226826,-19.73904 z"
+       style="opacity:0.875;fill:#999999;fill-opacity:1;stroke:none;stroke-width:0.11845408;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.97175137" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path49494"
+       d="m 37.269718,143.30062 c -1.641726,-0.64434 -1.803348,-1.59457 -1.803348,-10.60246 0,-8.6181 0,-8.6181 1.184803,-9.66955 0.651642,-0.57829 1.906815,-1.21394 2.789275,-1.41254 1.014238,-0.22826 7.228924,-0.36098 16.893825,-0.36076 20.576488,3.7e-4 18.888124,-0.98916 18.718084,10.97136 -0.122927,8.64687 -0.122927,8.64687 -1.155993,9.6823 -0.568185,0.56949 -1.705467,1.20373 -2.527298,1.40941 -1.972575,0.49371 -32.837149,0.47762 -34.099348,-0.0178 z m 34.717949,-1.05781 c 2.057419,-1.09405 2.321925,-2.20712 2.321925,-9.77101 0,-7.72677 -0.261904,-8.73763 -2.557796,-9.87221 -1.306397,-0.6456 -2.051043,-0.67602 -16.574417,-0.67722 -12.68509,-0.001 -15.404566,0.0817 -16.40064,0.49925 -2.429502,1.01833 -2.483917,1.2385 -2.483917,10.05018 0,8.63256 0.07681,8.98184 2.190626,9.96194 1.290086,0.59816 7.836312,0.78195 20.969628,0.58874 10.114957,-0.14881 11.511591,-0.23568 12.534591,-0.77967 z m -32.223892,-0.70343 c -0.704624,-0.24864 -1.401002,-0.70525 -1.547504,-1.0147 -0.218464,-0.46145 -0.07094,-0.43803 0.820336,0.13023 0.940358,0.59955 1.705219,0.69805 5.679761,0.73138 3.569034,0.0299 4.224546,0.1003 2.940161,0.31564 -2.52326,0.42304 -6.463123,0.3419 -7.892754,-0.16255 z m 31.24001,-17.1062 c -0.376607,-0.36781 -1.414169,-0.50758 -3.872935,-0.52171 -1.847182,-0.0106 -4.102321,-0.14401 -5.01142,-0.29643 -1.299481,-0.21787 -0.707245,-0.28535 2.769834,-0.31564 4.414966,-0.0385 6.277427,0.2894 6.698657,1.17915 0.282918,0.5976 0.05617,0.57999 -0.584136,-0.0454 z"
+       style="fill:#000000;stroke-width:0.37203047" />
+  </g>
+  <g
+     inkscape:label="text"
+     id="layer3"
+     inkscape:groupmode="layer">
+    <text
+       transform="scale(0.99884323,1.0011581)"
+       id="text49550"
+       y="28.003946"
+       x="3.690474"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.71185088px;font-family:Insaniburger;-inkscape-font-specification:Insaniburger;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04349825;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Insaniburger;-inkscape-font-specification:Insaniburger;stroke-width:0.04349825"
+         y="28.003946"
+         x="3.690474"
+         id="tspan49548"
+         sodipodi:role="line">money manager ex</tspan></text>
+  </g>
+  <g
+     style="display:inline"
+     inkscape:label="icon_office"
+     id="layer10"
+     inkscape:groupmode="layer">
+    <g
+       id="g2455"
+       transform="matrix(0.18305115,0,0,0.1651771,-46.105739,-23.454333)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke-width:0.61634219"
+         d="m 338.30358,275.11866 c -2.54276,-1.64035 -4.50285,-4.35463 -6.11053,-8.46166 -1.60184,-4.09212 -1.85063,-8.19879 -0.78718,-12.99436 0.89509,-4.03648 1.35371,-4.71935 16.38649,-24.39965 9.85899,-12.90696 16.26402,-20.75065 17.66794,-21.63639 4.38492,-2.76648 7.82567,-1.21847 13.81827,6.21696 4.65935,5.78121 7.25205,11.03368 8.12564,16.46167 1.09182,6.78398 0.46816,8.01103 -13.49368,26.54925 -10.13396,13.45566 -12.51274,16.27126 -13.72993,16.25115 -1.96017,-0.0323 -3.34889,-2.68328 -2.63537,-5.03061 0.28056,-0.92297 3.58381,-5.63601 7.34057,-10.4734 3.75675,-4.83741 9.04754,-11.91182 11.7573,-15.7209 4.19593,-5.89821 4.91945,-7.26564 4.877,-9.21748 -0.077,-3.53305 -1.55358,-6.56537 -6.27309,-12.88135 -3.17757,-4.25241 -4.70308,-5.80489 -5.70395,-5.80489 -1.06695,0 -4.60327,4.20095 -16.14023,19.17371 -8.12566,10.54555 -15.15376,20.11223 -15.61803,21.2593 -1.74326,4.30716 -0.60169,10.09675 2.605,13.21156 1.30138,1.26409 1.53449,1.28783 2.96939,0.30235 2.13429,-1.4658 25.04227,-31.59241 25.04227,-32.93346 0,-3.63235 -1.40144,-2.29481 -11.55741,11.03037 -4.84247,6.35358 -9.38575,11.83767 -10.09617,12.18684 -2.29603,1.12858 -4.866,-2.03993 -3.7866,-4.66844 1.03158,-2.51212 19.82406,-26.39522 21.50864,-27.33503 3.53639,-1.97294 7.48026,-0.51187 9.13992,3.38602 1.02295,2.40252 0.87484,6.77317 -0.34046,10.04494 -1.44431,3.88843 -25.01082,34.42818 -27.69494,35.8898 -2.67281,1.45545 -4.54729,1.3507 -7.27086,-0.4063 z"
+         id="path53927"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

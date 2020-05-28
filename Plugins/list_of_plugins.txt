@@ -1,4 +1,5 @@
 This is a list of the Wordpress plugins I use. 
+All custom plugins are or will be moved to their own repo so I can better update and manage them.   
 
 STANDARD: All In One SEO : Controls robots.txt title and keywords of page for search engines.  
 
