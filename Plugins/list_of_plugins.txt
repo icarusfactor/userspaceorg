@@ -82,7 +82,7 @@ STANDARD: Export WordPress Menus : Used to save state of theme menus.
 
 STANDARD: Media Sync  : Scan uploads directory and bring files to Media Library.  
 
-STANDARD: Widget Data - Setting Import/Export Plugin : Used to save state of theme menus.
+STANDARD: Widget Data - Setting Import/Export Plugin : Used to save state of theme widgets.
 
 STANDARD: Wordfence Security : Used to block bad login attempts and rate limit accesses for DDOS attacks.
 
