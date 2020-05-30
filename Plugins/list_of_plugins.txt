@@ -20,8 +20,6 @@ STANDARD: Footer Mega Grid Columns :  By WP OnlineSupport
 STANDARD: Frontend Checklist :  By Jonas Breuer 
 NOTE: I use this plugin for personal TODO check list. 
 
-CUSTOM: Hack for turning off LOADING screen across all browsers. By Daniel Yount 
-
 CUSTOM: Infosec Vulnerability RSS Feed App : By Daniel Yount
 
 STANDARD: Menu Image : By Rui Guerreiro 
@@ -30,9 +28,6 @@ NOTE: For my Social Media feeds
 CUSTOM: New FOSS Packages RSS Feed App :  By Daniel Yount IcarusFactor 
 
 CUSTOM: New Linux Kernel RSS Feed App :  By Daniel Yount IcarusFactor 
-
-STANDARD: Page Animations And Transitions : By weblizar
-NOTE: Had to remove class via jquery so Jquery DataTables would work ,which was done in functions.php
 
 STANDARD: podcast player : By vedathemes
 NOTE: My Audio Peel plugin uses this plugin.
@@ -47,7 +42,7 @@ STANDARD: Slide Anything - Responsive Content / HTML Slider and Carousel : By Si
 NOTE: Used for all of my dynamic feed pages 
 
 STANDARD: TablePress : By Tobias Bäthge 
-NOTE: Had to add css and js to my functions.php and init datatable to common.js : Used for Citations
+NOTE: Had to add css and js to my functions.php and init datatable to common.js : Used for Citations : DB Used for Appliepie Feed Manager. 
 
 STANDARD: Broken Link Checker. : By ManageWP
 NOTE: These pluings are only active when I need them , I disable them to save active memory and processing time. 
@@ -82,4 +77,12 @@ STANDARD: Quttera Web Malware Scanner :
 STANDARD: Version Info :
 
 STANDARD: HyperDB : This can be downloaded, but moved to needed locations afterwards.I have install instructions in the Markdown. 
+
+STANDARD: Export WordPress Menus : Used to save state of theme menus. 
+
+STANDARD: Media Sync  : Scan uploads directory and bring files to Media Library.  
+
+STANDARD: Widget Data - Setting Import/Export Plugin : Used to save state of theme menus.
+
+STANDARD: Wordfence Security : Used to block bad login attempts and rate limit accesses for DDOS attacks.
 
