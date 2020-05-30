@@ -1,9 +1,9 @@
 /*
 Theme Name: Curator
 Author: Daniel Yount
-Author URI: http://www.userspace.org
+Author URI: http://www.47.217.123.141:8080
 Description: Website for colections
-Version: 0.4
+Version: 0.7.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: collections
@@ -21,11 +21,11 @@ This theme, like WordPress, is licensed under the GPL.
 
 .halftonecircles {
 background-color: #709fb7;
-background-image: radial-gradient(circle, rgba(0,212,255,0.1) 75%, rgba(49,145,171,1.0) 100%, rgba(9,108,121,0.1) 55%) , url("http://userspace.org/wp-content/uploads/2019/12/uso_toon_bg.png"); 
+background-image: radial-gradient(circle, rgba(0,212,255,0.1) 75%, rgba(49,145,171,1.0) 100%, rgba(9,108,121,0.1) 55%) , url("http://47.217.123.141:8080/wp-content/uploads/2019/12/uso_toon_bg.png"); 
         }
 
 #thegame {
-background-image: radial-gradient(circle, rgba(0,212,255,0.1) 75%, rgba(49,145,171,1.0) 100%, rgba(9,108,121,0.1) 55%) , url("http:///userspace.org/wp-content/uploads/2019/12/uso_toon_bg.png"); 
+background-image: radial-gradient(circle, rgba(0,212,255,0.1) 75%, rgba(49,145,171,1.0) 100%, rgba(9,108,121,0.1) 55%) , url("http:///47.217.123.141:8080/wp-content/uploads/2019/12/uso_toon_bg.png"); 
 }	
 
 .solidgradient {
@@ -192,7 +192,7 @@ display: none;
 padding: 0px;
 height: 190px;
 background-repeat: no-repeat;
-background-image: url("http://userspace.org/wp-content/uploads/2019/10/USO_LOGO3.png");
+background-image: url("http://47.217.123.141:8080/wp-content/uploads/2019/10/USO_LOGO3.png");
 background-size: contain;		
 }
 
@@ -204,7 +204,7 @@ top: 0px;
 height: 25px;
 width: 100%;
 background-repeat: repeat-x;
-background-image: url("http://userspace.org/wp-content/uploads/2019/09/USO__marktop-2.png");
+background-image: url("http://47.217.123.141:8080/wp-content/uploads/2019/09/USO__marktop-2.png");
 }
 
 .marktopbanner{
@@ -213,14 +213,14 @@ right: 0px;
 top: 0px;
 height: 25px;
 width: 100%;
-background-repeat: repeat-x; background-image: url("http://userspace.org/wp-content/uploads/2019/08/USO__marktop-1.png");
+background-repeat: repeat-x; background-image: url("http://47.217.123.141:8080/wp-content/uploads/2019/08/USO__marktop-1.png");
 
 }
 
 .markbottom{                        position: absolute; 
 top: 500px;	
 height: 25px;                        width: 100%;	
-background-image: url("http://userspace.org/wp-content/uploads/2019/08/USO_markbottom-1.png");
+background-image: url("http://47.217.123.141:8080/wp-content/uploads/2019/08/USO_markbottom-1.png");
 
 }
 
@@ -261,7 +261,7 @@ left: 1.5em;
 top: 0em;
 height: 205px;
 width: 165px;
-background-image: url("http://userspace.org/wp-content/uploads/2019/08/bannericon1-1.png");
+background-image: url("http://47.217.123.141:8080/wp-content/uploads/2019/08/bannericon1-1.png");
 }
 
 .bannericontwo{
@@ -271,7 +271,7 @@ top: 2em;
 height: 205px;
 width: 165px;
 z-index: 3;
-background-image: url("http://userspace.org/wp-content/uploads/2019/08/bannericon2-1.png");
+background-image: url("http://47.217.123.141:8080/wp-content/uploads/2019/08/bannericon2-1.png");
 }
 
 .bannericonthree{
@@ -280,7 +280,7 @@ right: 0.5em;
 top: 240px;
 height: 205px;
 width: 165px;
-background-image: url("http://userspace.org/wp-content/uploads/2019/08/bannericon3-1.png");
+background-image: url("http://47.217.123.141:8080/wp-content/uploads/2019/08/bannericon3-1.png");
 }
 
 /* Main Content Area*/
@@ -291,7 +291,7 @@ color: #7098b7;
 
 
 div.header-background {
-background: url(http://userspace.org/wp-content/uploads/2019/08/USO_background-1024x577-1.png);
+background: url(http://47.217.123.141:8080/wp-content/uploads/2019/08/USO_background-1024x577-1.png);
 background-repeat: no-repeat;
 background-size: cover;
 height: 500px;
@@ -310,6 +310,19 @@ margin-right: auto;
 z-index: 999;	
 	
 }
+
+#button-container-item {	
+position: relative;
+top: -30px;
+left: 0px;
+display: flex;
+margin-left: auto;
+margin-right: auto;
+z-index: 999;	
+	
+}
+
+
 
 
 #button-container {	
@@ -409,7 +422,7 @@ right: 10px;
 top: -60px;
 height: 50px;
 width: 50px;
-background-image:  url("http://userspace.org/wp-content/uploads/2019/08/penguin_kernel-1.png");
+background-image:  url("http://47.217.123.141:8080/wp-content/uploads/2019/08/penguin_kernel-1.png");
         }
 
 #content-new-packages {
@@ -418,7 +431,7 @@ right: -30px;
 top: -70px;
 height: 60px;
 width: 44px;
-background-image:  url("http://userspace.org/wp-content/uploads/2019/08/cartoon_linux_package-1.png");
+background-image:  url("http://47.217.123.141:8080/wp-content/uploads/2019/08/cartoon_linux_package-1.png");
         }
 
 /*  Color the dilaog boxes.  */
@@ -561,6 +574,24 @@ font-size: 11px;
 }
 
 /* Mobile view */
+@media all and (max-width: 1250px) {
+#button-container-item {
+
+margin: 0px;
+width: 500px !important;
+transform: scale(0.9);
+}
+}
+
+@media all and (max-width: 500px) {
+#button-container-item {
+margin: -10px auto -10px auto;
+width: 500px !important;
+transform: scale(0.65);
+}
+}
+
+
 
 /*Hack to get words section to go away at same time as puzzle. */
 @media all and (max-width: 850px) {
@@ -622,7 +653,7 @@ width: 80px;
 #masthead{
 background-repeat: no-repeat;
 background-size: 100% 100%;
-background-image:	url("http://userspace.org/wp-content/uploads/2019/10/USO_LOGO_MOBILE.png");
+background-image:	url("http://47.217.123.141:8080/wp-content/uploads/2019/10/USO_LOGO_MOBILE.png");
 }	
 
 /* This is for mobile header image to respond correctly.*/ 
@@ -648,7 +679,7 @@ position: relative;
 top: -25px;
 background-repeat: repeat-x;
 height: 25px;
-background-image:	url("http://userspace.org/wp-content/uploads/2019/08/USO_markbottom-1.png");
+background-image:	url("http://47.217.123.141:8080/wp-content/uploads/2019/08/USO_markbottom-1.png");
 }
 
 
@@ -725,31 +756,27 @@ visibility:hidden;
 display: none;
 }
 
+#works { min-height: 150px; }
 
 /*fix for FOSS carousel size*/
-#id-3462 {
+#id-3462 , #id-3669 , #id-4570 , #id-4594 , #id-4595 , #id-4574 , #id-5024 , #id-4571 , #id-5036 , #id-4573 , #id-5025 , #id-4572 , #id-4593 {
+min-height: 150px !important;
 max-height: 150px;
 filter: blur(0.02em);
-background-image: radial-gradient(circle, rgba(0,212,255,0.1) 75%, rgba(49,145,171,0.8) 100%, rgba(9,108,121,0.1) 55%) , url("http://userspace.org/wp-content/uploads/2020/01/uso_toon_bg_purple.png");
+background-image: radial-gradient(circle, rgba(0,212,255,0.1) 75%, rgba(49,145,171,0.8) 100%, rgba(9,108,121,0.1) 55%) , url("http://47.217.123.141:8080/wp-content/uploads/2020/01/uso_toon_bg_purple.png");
 opacity: 0.8;
 overflow: hidden;
          }
 
-#id-3462 img {
+#id-3462 img , #id-3669 img , #id-4570 img , #id-4594 , #id-4595 img , #id-4574 img , #id-5024 img , #id-4571 img , #id-5036 img , #id-4573 img , #id-5025 img , #id-4572 , #id-4593 img {
 filter: brightness(0.9) sepia(1) hue-rotate(140deg) saturate(2);	
 }
 
-
-/*fix for Desktop carousel size*/
-#id-3556 {
-max-height: 150px;
-filter: blur(0.02em);
-background-image: radial-gradient(circle, rgba(0,212,255,0.1) 75%, rgba(49,145,171,0.8) 100%, rgba(9,108,121,0.1) 55%) , url("http://userspace.org/wp-content/uploads/2020/01/uso_toon_bg_purple.png");
-opacity: 0.8;	
-overflow: hidden;
-         }
-
-#id-3556 img {
-		filter: brightness(0.9) sepia(1) hue-rotate(140deg) saturate(2);
+#button-container-item {
+display: none;
+margin: auto;
+width: 35%;
 }
+
+
 

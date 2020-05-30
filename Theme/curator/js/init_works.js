@@ -1,9 +1,12 @@
-const version_of_curator_init_works="5"
-const works_site = "http://userspace.org";       
+const version_of_curator_init_works="22"
+const works_site = "http://47.217.123.141:8080";       
 
 console.log("VERISON:"+version_of_curator_init_works);
 
-function showLoadingWork() {
+function showLoadingWork( item_bar ) {
+
+    if( item_bar == 1 ) {document.getElementById("button-container-item").style.display = "block";}
+    if( item_bar == 0 ) {document.getElementById("button-container-item").style.display = "none";}
 
     const spcer = "&nbsp;</BR>".repeat(6);
     document.body.querySelector("#works").innerHTML = spcer;
@@ -36,6 +39,7 @@ function hideLoadingWork() {
 
 //    $("#loading").modal("hide");
     //console.log("HIDE LOADING ");
+    
 }
 
 // Loading taking too long. 
@@ -45,7 +49,7 @@ function hideLoadingWork() {
 //function errorLoadingWork() {
 
  // let spcer = "&nbsp;</BR>".repeat(2);
- // spcer += "<IMG STYLE=\"display:block;margin-left:auto;margin-right:auto;\" SRC=\"http://userspace.org/wp-content/uploads/2019/12/USO_tooktoolong.png\"></BR>";
+ // spcer += "<IMG STYLE=\"display:block;margin-left:auto;margin-right:auto;\" SRC=\"http://47.217.123.141:8080/wp-content/uploads/2019/12/USO_tooktoolong.png\"></BR>";
  // spcer += "&nbsp;</BR>".repeat(2);
  // document.body.querySelector("#collections").innerHTML = spcer;
  // $("#loading").modal("hide");
@@ -63,8 +67,8 @@ let timeout_works = new Promise((resolve, reject) => {
   }, 60000)
 })
 
-function embedwork( site_url ) {
-showLoadingWork(); 
+function embedwork( site_url , item_bar ) {
+showLoadingWork( item_bar  ); 
 
 // Run a timeout on second promise via race if process takes to long.
 let loading_wait = Promise.race([
@@ -91,17 +95,17 @@ e.preventDefault();
 switch(e.target.id) {
   case "FOSS":
     //console.log("SELECT FOSS");
-    embedwork( '/foss' );
+    embedwork( '/foss_utils', 1 );
     return false;       //You have to return false from CLICK event to activate AJAX.
     break;
   case "DISTRO":
     //console.log("SELECT DISTRO");
-    embedwork( '/distro' );
+    embedwork( '/distro', 0 );
     return false;
     break;
   case "DESKTOP":
     //console.log("SELECT DE-WM");
-    embedwork( '/desktop' );
+    embedwork( '/desktop', 0 );
     return false;
     break;
   default:
@@ -112,14 +116,99 @@ switch(e.target.id) {
 });
 
 
+
 // When page is finished loading run this.
 window.addEventListener('load', (event) => {
    // Init for wordpress plugins
-   $("body").removeClass("animsition");
    $('.tablepress-id-1').DataTable();
    //Set default page to show Virtualspace
-   //console.log("GET:"+site+"/ram");
    embedwork( "/distro" );
+
+
+var el = document.getElementById("foss_utils");
+el.innerHTML='<img id="foss_utils" class="item" src="http://47.217.123.141:8080/wp-content/uploads/2020/02/USOutils_icon.svg">';
+el = document.getElementById("foss_sys");
+el.innerHTML='<img id="foss_sys" class="item" src="http://47.217.123.141:8080/wp-content/uploads/2020/02/USOsystem_icon.svg">';
+el = document.getElementById("foss_serv");
+el.innerHTML='<img id="foss_serv" class="item" src="http://47.217.123.141:8080/wp-content/uploads/2020/02/USOserver_icon.svg">';
+el = document.getElementById("foss_media");
+el.innerHTML='<img id="foss_media" class="item" src="http://47.217.123.141:8080/wp-content/uploads/2020/02/USOmultimedia_icon.svg">';
+el = document.getElementById("foss_net");
+el.innerHTML='<img id="foss_net" class="item" src="http://47.217.123.141:8080/wp-content/uploads/2020/02/USOinternet_icon.svg">';
+el = document.getElementById("foss_dev");
+el.innerHTML='<img id="foss_dev" class="item" src="http://47.217.123.141:8080/wp-content/uploads/2020/02/USOdevelopment_icon.svg">';
+el = document.getElementById("foss_office");
+el.innerHTML='<img id="foss_office" class="item" src="http://47.217.123.141:8080/wp-content/uploads/2020/02/USOoffice_icon.svg">';
+el = document.getElementById("foss_graph");
+el.innerHTML='<img id="foss_graph" class="item" src="http://47.217.123.141:8080/wp-content/uploads/2020/02/USOgraphics_icon.svg">';
+el = document.getElementById("foss_sci");
+el.innerHTML='<img id="foss_sci" class="item" src="http://47.217.123.141:8080/wp-content/uploads/2020/02/USOscience_icon.svg">';
+el = document.getElementById("foss_game");
+el.innerHTML='<img id="foss_game" class="item" src="http://47.217.123.141:8080/wp-content/uploads/2020/02/USOgames_icon.svg">';
+
+
+
+$('.item').click(function(e){
+e.stopImmediatePropagation();
+e.preventDefault();
+
+switch(e.target.id) {
+  case "foss_utils":
+    console.log("SELECT UTILS");
+    embedwork( '/foss_utils' , 1 );
+    return false;       //You have to return false from CLICK event to activate AJAX.
+    break;
+  case "foss_sys":
+    console.log("SELECT SYS");
+    embedwork( '/foss_sys' , 1 );
+    return false;       //You have to return false from CLICK event to activate AJAX.
+    break;
+  case "foss_net":
+    console.log("SELECT NET");
+    embedwork( '/foss_net',1 );
+    return false;       //You have to return false from CLICK event to activate AJAX.
+    break;
+  case "foss_graph":
+    //console.log("SELECT FOSS");
+    embedwork( '/foss_graph',1 );
+    return false;       //You have to return false from CLICK event to activate AJAX.
+    break;
+  case "foss_sci":
+    //console.log("SELECT FOSS");
+    embedwork( '/foss_sci',1 );
+    return false;       //You have to return false from CLICK event to activate AJAX.
+    break;
+  case "foss_dev":
+    //console.log("SELECT FOSS");
+    embedwork( '/foss_dev',1 );
+    return false;       //You have to return false from CLICK event to activate AJAX.
+    break;
+  case "foss_serv":
+    //console.log("SELECT FOSS");
+    embedwork( '/foss_serv',1 );
+    return false;       //You have to return false from CLICK event to activate AJAX.
+    break;
+  case "foss_media":
+    //console.log("SELECT FOSS");
+    embedwork( '/foss_media',1 );
+    return false;       //You have to return false from CLICK event to activate AJAX.
+    break;
+  case "foss_game":
+    //console.log("SELECT FOSS");
+    embedwork( '/foss_game',1 );
+    return false;       //You have to return false from CLICK event to activate AJAX.
+    break;
+  case "foss_office":
+    //console.log("SELECT FOSS");
+    embedwork( '/foss_office',1 );
+    return false;       //You have to return false from CLICK event to activate AJAX.
+    break;
+  default:
+    return false;
+}
+
+});
+
    return false;
 });
 

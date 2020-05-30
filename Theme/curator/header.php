@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
    
-    <link rel="pingback" href="http://userspace.org/xmlrpc.php" />
+    <link rel="pingback" href="http://47.217.123.141:8080/xmlrpc.php" />
 
     <?php wp_head(); ?>
 
@@ -21,7 +21,7 @@
 
 <div id="vanish" >
 <!-- HOME LOGO BUTTON  -->
-<a href="http://userspace.org" >
+<a href="http://47.217.123.141:8080" >
 <div id="usohome" ></div>
 </a>
 </div>

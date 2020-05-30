@@ -56,6 +56,18 @@ function add_work_menu_atts( $atts, $item, $args ) {
 }
 add_filter( 'nav_menu_link_attributes', 'add_work_menu_atts', 10, 3 );
 
+// Add custom css CLASS and jquery launcher in ID for work menu
+function add_item_menu_atts( $atts, $item, $args ) {
+    // check if the item is in the item menu
+    if( $args->theme_location == 'item' ) {
+      // add the desired attributes:
+      $atts['class'] = 'item';
+      $atts['id'] = $item->title; 
+    }
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'add_item_menu_atts', 10, 3 );
+
 
 // Add custom css CLASS and jquery launcher in ID for collection menu
 function add_collection_menu_atts( $atts, $item, $args ) {
@@ -73,6 +85,7 @@ add_filter( 'nav_menu_link_attributes', 'add_collection_menu_atts', 10, 3 );
 function register_menu() {
 register_nav_menu('social',__( 'social' ));
 register_nav_menu('work',__( 'work' ));
+register_nav_menu('item',__( 'item' ));
 register_nav_menu('collection',__( 'collection' ));
 }
 add_action( 'init', 'register_menu' );
@@ -143,6 +156,50 @@ function curator_ajax_search( $request ) {
 
     return $response;     
 }
+
+
+//if( !function_exists('_add_my_quicktags') ){
+//    function _add_my_quicktags()
+//    { >
+//        <script type="text/javascript">
+//        /* Add custom Quicktag buttons to the editor Wordpress ver. 3.3 and above only
+//         *
+//         * Params for this are:
+//         * string id Required. Button HTML ID
+//         * string display Required. Button's value="..."
+//         * string|function arg1 Required. Either a starting tag to be inserted like "<span>" or a callback that is executed when the button is clicked.
+//         * string arg2 Optional. Ending tag like "</span>"
+//         * string access_key Optional. Access key for the button.
+//         * string title Optional. Button's title="..."
+//         * int priority Optional. Number representing the desired position of the button in the toolbar. 1 - 9 = first, 11 - 19 = second, 21 - 29 = third, etc.
+//         * string instance Optional. Limit the button to a specific instance of Quicktags, add to all instances if not present.(optional)
+//         */
+//        QTags.addButton( 'php', 'PHP', '[ php gutter="false" ]', '[ /php]' );
+//        QTags.addButton( 'js', 'JS', '[ js gutter="false"]', '[ /js]' );
+//        QTags.addButton( 'h2', 'H2', '< h2>', '< /h2>' );
+//        QTags.addButton( 'h3', 'H3', '< h3>', '< /h3>' );
+//        QTags.addButton( 'my_prompt', 'alert',  my_prompt);
+//
+//        QTags.addButton( 'promt', 'Prompt', function(){
+//            QTags.insertContent(window.prompt() )
+//        });
+//
+//        function my_prompt() {
+//    var my_class = prompt( 'Enter a class name:', '' );
+//     
+//    if ( my_class ) {
+//        QTags.insertContent('<div class="' + my_class +'"></div>');
+//    }
+//}
+
+//        </script>
+//    <?php }
+    // We can attach it to 'admin_print_footer_scripts' (for admin-only) or 'wp_footer' (for front-end only)
+//    add_action('admin_print_footer_scripts',  '_add_my_quicktags');
+//}
+
+
+
 
 function curator_get_search_args() {
 

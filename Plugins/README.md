@@ -1,4 +1,5 @@
-# CUSTOM PLUGINS USED ON USERSPACE.ORG that you will need to clone via seperate repo. 
+# CUSTOM PLUGINS USED ON USERSPACE.ORG
+# that you'll need to clone via seperate repo. 
 
 > As the USERSPACE project has grown into what I wanted it to be,the code was becoming unmanagable.
 > So I decided to split it up into its plugins,theme and leave the standard stuff and content and setup here.

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
    
-    <link rel="pingback" href="http://userspace.org/xmlrpc.php" />
+    <link rel="pingback" href="http://47.217.123.141:8080/xmlrpc.php" />
 
     <?php wp_head(); ?>
 
@@ -21,7 +21,7 @@
 
 <div id="vanish" >
 <!-- HOME LOGO BUTTON  -->
-<a href="http://userspace.org" >
+<a href="http://47.217.123.141:8080" >
 <div id="usohome" ></div>
 </a>
 </div>
@@ -62,7 +62,7 @@
 </div>
 </div>
 
-<script src="http://userspace.org/wp-content/themes/curator/js/init_works.js"></script>
+<script src="http://47.217.123.141:8080/wp-content/themes/curator/js/init_works.js"></script>
  <!-- Carousel short code goes here.  -->
      <div id="works">
      <?php  echo str_repeat('&nbsp;</BR>', 6); //empty fill area  ?>
@@ -75,7 +75,27 @@
 				
 	<div class="header-background">
 
+<div id="vanish" >
 <div class="marktopbanner" ></div>
+
+<nav id="button-container-item">
+<div style="position: relative;width: 0;height: 0;" ><div style="position: relative;left: 440px;top: 10px;" >[<a target="_blank" href="https://www.linuxlinks.com">Linux&nbsp;Links</a>]</div></div>
+<?php
+    //Collection Dynamic Menu List
+    $menuParameters = array(
+      'theme_location' => 'item',
+      'container'       => false,
+      'echo'            => false,
+      'depth'           => 0,
+    );
+    // Convert menu string into only anchor tags.
+    echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+    
+?>
+
+</nav>
+
+</div> 
 
 		<section class="header-content">
    
@@ -126,7 +146,7 @@
       
 
 <!-- HACK:NEEDS FUTURE FIX: Init run to setup default page to show and to load slide anything jquery script so it works properly  -->
-<script src="http://userspace.org/wp-content/themes/curator/js/init4.js"></script>
+<script src="http://47.217.123.141:8080/wp-content/themes/curator/js/init4.js"></script>
 <?php echo do_shortcode("[slide-anything id='1712']"); ?>
 
 

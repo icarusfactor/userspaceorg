@@ -1,5 +1,5 @@
 const version_of_curator_init="16"
-const site = "http://userspace.org";       
+const site = "http://47.217.123.141:8080";       
 
 console.log("VERISON:"+version_of_curator_init );
 
@@ -45,7 +45,7 @@ function hideLoadingCollection() {
 function errorLoadingCollection() {
 
  // let spcer = "&nbsp;</BR>".repeat(2);
- // spcer += "<IMG STYLE=\"display:block;margin-left:auto;margin-right:auto;\" SRC=\"http://userspace.org/wp-content/uploads/2019/12/USO_tooktoolong.png\"></BR>";
+ // spcer += "<IMG STYLE=\"display:block;margin-left:auto;margin-right:auto;\" SRC=\"http://47.217.123.141:8080/wp-content/uploads/2019/12/USO_tooktoolong.png\"></BR>";
  // spcer += "&nbsp;</BR>".repeat(2);
  // document.body.querySelector("#collections").innerHTML = spcer;
  // $("#loading").modal("hide");
