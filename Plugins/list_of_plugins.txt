@@ -86,3 +86,5 @@ STANDARD: Widget Data - Setting Import/Export Plugin : Used to save state of the
 
 STANDARD: Wordfence Security : Used to block bad login attempts and rate limit accesses for DDOS attacks.
 
+CUSTOM: Random Slider : Use to give the Distro Carousel a random start so its not the same each time. 
+
