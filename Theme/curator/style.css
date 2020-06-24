@@ -3,7 +3,7 @@ Theme Name: Curator
 Author: Daniel Yount
 Author URI: http://www.userspace.org
 Description: Website for colections
-Version: 0.8.3
+Version: 0.8.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: collections
@@ -201,7 +201,7 @@ background-size: contain;
 position: relative;
 right: 0px;
 top: 0px;
-height: 25px;
+height: 24px;
 width: 100%;
 background-repeat: repeat-x;
 background-image: url("http://userspace.org/wp-content/uploads/2019/09/USO__marktop-2.png"); 
@@ -315,7 +315,7 @@ z-index: 999;
 
 #button-container-work {	
 position: relative;
-top: -23px;
+top: -25px;
 left: 0px;
 display: flex;
 margin-left: auto;

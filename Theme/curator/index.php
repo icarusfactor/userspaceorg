@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
    
-    <link rel="pingback" href="http://47.217.123.141:8080/xmlrpc.php" />
+    <link rel="pingback" href="http://userspace.org/xmlrpc.php" />
 
     <?php wp_head(); ?>
 
@@ -21,7 +21,7 @@
 
 <div id="vanish" >
 <!-- HOME LOGO BUTTON  -->
-<a href="http://47.217.123.141:8080" >
+<a href="http://userspace.org" >
 <div id="usohome" ></div>
 </a>
 </div>
@@ -35,12 +35,28 @@
   <div class="bannerbox" >
   <div class="bannertext"></div>
   </div>
-
 </header>
 </div>
-
-
-	<div id="slider_cover" >
+<?php echo do_shortcode('
+[hyperfetch class="works" initid=0 controlsid="button-container-work" containerid="works"  loadbr=5  submenuid="button-container-item"    ]
+[hyperswitch tag="DISTRO" url="/distro" menu="10" ]
+[hyperswitch tag="DESKTOP" url="/desktop" menu="10" ]
+[hyperswitch tag="FOSS" url="/foss_utils" menu="11"  ]
+[/hyperfetch]'); ?>
+<?php echo do_shortcode('
+[hyperfetch class="item" controlsid="button-container-item" containerid="works"  loadbr=5 ]
+[hyperswitch tag="foss_utils" url="/foss_utils"  menu="1" img="http://userspace.org/wp-content/uploads/2020/02/USOutils_icon.svg"  ]
+[hyperswitch tag="foss_sys" url="/foss_sys" menu="1" img="http://userspace.org/wp-content/uploads/2020/02/USOsystem_icon.svg" ]
+[hyperswitch tag="foss_net" url="/foss_net" menu="1" img="http://userspace.org/wp-content/uploads/2020/02/USOinternet_icon.svg" ]
+[hyperswitch tag="foss_graph" url="/foss_graph" menu="1" img="http://userspace.org/wp-content/uploads/2020/02/USOgraphics_icon.svg" ]
+[hyperswitch tag="foss_sci" url="/foss_sci" menu="1" img="http://userspace.org/wp-content/uploads/2020/02/USOscience_icon.svg" ]
+[hyperswitch tag="foss_dev" url="/foss_dev" menu="1" img="http://userspace.org/wp-content/uploads/2020/02/USOdevelopment_icon.svg" ]
+[hyperswitch tag="foss_serv" url="/foss_serv"  menu="1" img="http://userspace.org/wp-content/uploads/2020/02/USOserver_icon.svg" ]
+[hyperswitch tag="foss_media" url="/foss_media" menu="1" img="http://userspace.org/wp-content/uploads/2020/02/USOmultimedia_icon.svg" ]
+[hyperswitch tag="foss_game" url="/foss_game" menu="1" img="http://userspace.org/wp-content/uploads/2020/02/USOgames_icon.svg" ]
+[hyperswitch tag="foss_office" url="/foss_office" menu="1" img="http://userspace.org/wp-content/uploads/2020/02/USOoffice_icon.svg" ]
+[/hyperfetch]'); ?>
+<div id="slider_cover" >
         <div style="height: 25px;width: 100%;">
         <div id="vanish"><div class="marktop" ></div>
 
@@ -59,10 +75,11 @@
 ?>
 
 </nav>
+
+
 </div>
 </div>
 
-<script src="http://47.217.123.141:8080/wp-content/themes/curator/js/init_works.js"></script>
  <!-- Carousel short code goes here.  -->
      <div id="works">
      <?php  echo str_repeat('&nbsp;</BR>', 6); //empty fill area  ?>
@@ -77,7 +94,6 @@
 
 <div id="vanish" >
 <div class="marktopbanner" ></div>
-
 <nav id="button-container-item">
 <div style="position: relative;width: 0;height: 0;" ><div style="position: relative;left: 440px;top: 10px;" >[<a target="_blank" href="https://www.linuxlinks.com">Linux&nbsp;Links</a>]</div></div>
 <?php
@@ -92,28 +108,19 @@
     echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
     
 ?>
-
 </nav>
-
 </div> 
-
-		<section class="header-content">
-   
+		<section class="header-content">   
 			<div class="container">
 		<section id="leftside-attraction" class="row">
                     <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Leftside Attraction") ) : ?><?php endif;?>
                 </section>
-
 				<section id="main-attraction" class="row align-center">
-
-                                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Main Attraction") ) : ?><?php endif;?>
-                             
+                                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Main Attraction") ) : ?><?php endif;?>                             
                    		</section>
-
 		<section id="rightside-attraction" class="row">
                     <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Rightside Attraction") ) : ?><?php endif;?>
                 </section>
-
 		</div>
          </section> 
 <div id="vanish">
@@ -143,10 +150,16 @@
 			<div class="container">    
 
 
-      
 
-<!-- HACK:NEEDS FUTURE FIX: Init run to setup default page to show and to load slide anything jquery script so it works properly  -->
-<script src="http://47.217.123.141:8080/wp-content/themes/curator/js/init4.js"></script>
+<?php echo do_shortcode('
+[hyperfetch class="collections" initid=0 controlsid="button-container" containerid="collections"  loadbr=30 ]
+[hyperswitch tag="RAM" url="/ram" menu="1" ]
+[hyperswitch tag="NEWS" url="/newsfeeds" menu="1" ]
+[hyperswitch tag="VIDEO" url="/videocast" menu="1" ]
+[hyperswitch tag="AUDIO" url="/podcast" menu="1" ]
+[hyperswitch tag="INFOSEC" url="/infosec" menu="1" ]
+[/hyperfetch]'); ?>
+
 <?php echo do_shortcode("[slide-anything id='1712']"); ?>
 
 
@@ -156,3 +169,4 @@
 
 
 <?php get_footer(); ?>
+
