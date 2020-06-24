@@ -5,6 +5,12 @@
 > So I decided to split it up into its plugins,theme and leave the standard stuff and content and setup here.
 
 
+## hyperfetch [ https://github.com/icarusfactor/hyperfetch ](URL)
+``` git clone https://github.com/icarusfactor/hyperfetch.git ```
+``` Wordpress Plugin: Creates dynamic HTML loading areas with nav and sub-menu controls .```
+``` Lets you create a custom Single Page Application with Wordpress. ```
+
+
 ## applepie_feed_manager [ https://github.com/icarusfactor/applepie_feed_manager](URL)
 ``` git clone https://github.com/icarusfactor/applepie_feed_manager.git ```
 ``` APFM is a core feature of the AppLe pie RSS management system. ```
